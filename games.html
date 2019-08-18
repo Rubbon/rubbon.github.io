@@ -1,0 +1,266 @@
+<!doctype html>
+<html lang="en">
+
+<!-- Metadata/header -->
+<head>
+
+<meta charset="utf-8">
+
+<meta name="description" content="Robin Field's Cool Portfolio">
+<meta name="keywords" content="portfolio, robin, robinfield, littlelands, cool, programming, pixelart, gamemaker">
+
+
+<title>Robin Field's Portfolio - GAMES</title>
+
+<!-- Get navlist -->
+<link rel="stylesheet" href="navlist.css">
+
+<!-- CSS -->
+<style>
+
+    :root {
+        /* Make it so you can't select everything */
+        -webkit-touch-callout: none;
+        -webkit-user-select: none;
+        -khtml-user-select: none;
+        -moz-user-select: none;
+        -ms-user-select: none;
+        user-select: none;
+    }
+
+    body{
+		width: 800;
+		height: 100%;
+		/*background: url(img/img_background.png); */
+		background-color: black;
+	}
+
+    #background {
+        z-index: -1;
+        position:fixed;
+        bottom: 0%;
+        width: 100%;
+        height: 448px;
+        background-image: url("img/bg_dither.png");
+        background-repeat: repeat-x;
+        background-position: bottom;
+
+        animation: anim_background_slidein 0.6s
+    }
+
+    /* background slide-in */
+	@keyframes anim_background_slidein {
+	    from {
+	        bottom: -100%;
+	    }
+	    to {
+	        bottom: 0%;
+	    }
+	}
+
+
+    #wrapper {
+        margin-top: 2%;
+        margin-left: 10%;
+        width: 70%;
+        height: 100%;
+
+        animation: anim_wrapper_slidein 0.6s
+    }
+
+    /* wrapper slide-in animation */
+	@keyframes anim_wrapper_slidein {
+	    from {
+	        margin-left: -100%;
+	    }
+	    to {
+	        margin-left: 10%;
+	    }
+	}
+
+    .gamebox {
+        display: inline-block;
+        margin-bottom: 4%;
+        margin-left: 11.5%;
+
+        transition-duration: 0.1s;
+        transition-timing-function: ease;
+    }
+
+    .gamebox img {
+        transition-duration: 0.1s;
+        transition-timing-function: ease;
+    }
+
+    .gamebox:hover {
+        /*margin-top: 9%;*/
+    }
+
+    .gb_image:hover img {
+        filter: blur(2px) grayscale(60%);
+        -webkit-filter: blur(2px) grayscale(60%); /* Safari 6.0 - 9.0 */
+
+        -webkit-transform: scale(1.5);
+        transform: scale(1.5);
+    }
+
+    .gb_image {
+        width: 240px;
+        height: 320px;
+        overflow: hidden;
+
+        border-image: url(img/dbox_nineslice.png) 20 fill repeat;
+		border-image-width: 20px;
+		border-image-outset: 16px;
+
+    }
+
+    .gb_textbit {
+
+        position: relative;
+        width: 240px;
+        height: 40px;
+        bottom: -17px;
+
+        font-size: 32px;
+        text-align: center;
+		font-family: Arial;
+
+        border-image: url(img/dbox_nineslice.png) 20 fill repeat;
+		border-image-width: 20px;
+		border-image-outset: 16px;
+    }
+
+    .infobar_linebreak {
+        width: 100%;
+        height: 8px;
+        top: -8px;
+        position: relative;
+    }
+
+    .infobar_toptxt {
+		font-size: 32px;
+		font-family: Arial;
+        position: relative;
+        font-weight: bold;
+    }
+
+    .dbox {
+
+        position: relative;
+
+        border-image: url(img/dbox_nineslice.png) 20 fill repeat;
+		border-image-width: 20px;
+		border-image-outset: 16px;
+
+        font-size: 28px;
+		font-family: Arial;
+        text-align: justify;
+    }
+
+    .linkbox {
+        z-index: 100;
+        position: relative;
+        top: 70px;
+        left: 5px;
+
+        font-size: 30px;
+		font-family: fantasy;
+    }
+
+</style>
+
+
+</head>
+
+
+<!-- Background -->
+<div id="background"> </div>
+
+<!-- HTML -->
+<body>
+
+
+    <!-- Ludum Dare Games -->
+    <div id="wrapper">
+
+        <font class="infobar_toptxt" color="white"> Ludum Dare </font>
+        <img class="infobar_linebreak" src = "img/linebreak.png">
+
+        <div class="dbox">
+            <font color="white">
+                <br>
+                &nbsp;&nbsp;&nbsp;&nbsp; Here is a collection of my <a href="https://ldjam.com/" style="text-decoration:none"> <font color="#FF6D69" onmouseover="this.color='white'" onmouseout="this.color='#FF6D69'">LUDUM DARE</font></a> games!
+                <br>
+                <br>
+                &nbsp;&nbsp;&nbsp;&nbsp; These free games were all made within 72 hours with a specific theme.
+                <br>
+                <br>
+                &nbsp;&nbsp;&nbsp;&nbsp; My most popular LD game is
+                <a href="https://robinfield.itch.io/little-lands" style="text-decoration:none"> <font color="#FF6D69" onmouseover="this.color='white'" onmouseout="this.color='#FF6D69'">Little Lands</font></a>,
+                which won 3rd place out of over 19,800 entries and
+                <br>
+                &nbsp;&nbsp;&nbsp;&nbsp; has been featured in media like Rock Paper Shotgun and PC Gamer.
+
+
+                <br>
+                <br>
+            </font>
+        </div>
+
+        <br><br><br><br><br><br>
+
+        <div>
+            <div class="gamebox">
+                <div class="gb_image"> <a href="https://robinfield.itch.io/city33"> <img src = "img/gameart/ga_city33.gif"> </a> </div>
+                <div class="gb_textbit"> <font color="white"> City 33 </font> </div>
+            </div>
+            <div class="gamebox">
+                <div class="gb_image"> <a href="https://robinfield.itch.io/cronus-tomb-2"> <img src = "img/gameart/ga_ct2.gif"> </a> </div>
+                <div class="gb_textbit"> <font color="white"> Cronus' Tomb 2 </font> </div>
+            </div>
+            <div class="gamebox">
+                <div class="gb_image"> <a href="https://robinfield.itch.io/perpetual-quest"> <img src = "img/gameart/ga_pquest.gif"> </a> </div>
+                <div class="gb_textbit"> <font color="white"> Perpetual Quest </font> </div>
+            </div>
+            <div class="gamebox">
+                <div class="gb_image"> <a href="https://robinfield.itch.io/plagued-station"> <img src = "img/gameart/ga_pstation.gif"> </a> </div>
+                <div class="gb_textbit"> <font color="white"> Plagued Station </font> </div>
+            </div>
+            <div class="gamebox">
+                <div class="linkbox">
+                    <a href="https://www.pcgamer.com/free-games-of-the-week/74/" style="text-decoration:none">
+                        <font color="white" onmouseover="this.color='black'" onmouseout="this.color='white'"> PC GAMER </font>
+                    </a>
+                    &nbsp;&nbsp;<br>
+                    <a href="https://www.rockpapershotgun.com/2017/05/14/free-games-of-the-week-may14/" style="text-decoration:none">
+                        <font color="white" onmouseover="this.color='black'" onmouseout="this.color='white'"> RPS </font>
+                    </a>
+
+                </div>
+                <div class="gb_image"> <a href="https://robinfield.itch.io/little-lands"> <img src = "img/gameart/ga_littlelands.gif"> </a> </div>
+                <div class="gb_textbit"> <font color="white"> Little Lands </font> </div>
+            </div>
+        </div>
+
+    </div>
+
+
+
+    <!-- Nav Options -->
+    <div id="navlist">
+    	<navopt> <a href="front.html"> <img src="img/navopt_front.png"> </a> </navopt>
+    	<br>
+    	<navopt> <a href="about.html"> <img src="img/navopt_about.png"> </a> </navopt>
+    	<br>
+    	<navopt> <a href="art.html"> <img src="img/navopt_art.png"> </a> </navopt>
+    	<br>
+    	<navopt-selected> <img src="img/navopt_games.png"> </navopt-selected>
+    	<!--<br>
+    	<navopt> <a href="stats.html"> <img src="img/navopt_stats.png"> </a> </navopt>
+        -->
+    	<br>
+    	<navopt> <a href="contact.html"> <img src="img/navopt_contact.png"> </a> </navopt>
+    </div>
+
+</body>

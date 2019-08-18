@@ -1,0 +1,320 @@
+<!doctype html>
+<html lang="en">
+
+<!-- Metadata/header -->
+<head>
+
+<meta charset="utf-8">
+
+<meta name="description" content="Robin Field's Cool Portfolio">
+<meta name="keywords" content="portfolio, robin, robinfield, littlelands, cool, programming, pixelart, gamemaker">
+
+
+<title>Robin Field's Portfolio - ABOUT</title>
+
+<!-- Get navlist -->
+<link rel="stylesheet" href="navlist.css">
+
+<!-- CSS -->
+<style>
+
+    :root {
+        /* Make it so you can't select everything */
+        -webkit-touch-callout: none;
+        -webkit-user-select: none;
+        -khtml-user-select: none;
+        -moz-user-select: none;
+        -ms-user-select: none;
+        user-select: none;
+    }
+
+    body{
+		width: 800;
+		height: 100%;
+		/*background: url(img/img_background.png); */
+		background-color: black;
+	}
+
+    #background {
+        z-index: -1;
+        position:fixed;
+        bottom: 0%;
+        width: 100%;
+        height: 448px;
+        background-image: url("img/bg_dither.png");
+        background-repeat: repeat-x;
+        background-position: bottom;
+
+        animation: anim_background_slidein 0.4s
+    }
+
+    /* background slide-in */
+	@keyframes anim_background_slidein {
+	    from {
+	        bottom: -100%;
+	    }
+	    to {
+	        bottom: 0%;
+	    }
+	}
+
+    #wrapper {
+        margin-top: 2%;
+        margin-left: 2%;
+        width: 75%;
+        height: 100%;
+    }
+
+    .dbox {
+
+        position: relative;
+
+        border-image: url(img/dbox_nineslice.png) 20 fill repeat;
+		border-image-width: 20px;
+		border-image-outset: 16px;
+
+        font-size: 28px;
+		font-family: Arial;
+        text-align: justify;
+    }
+
+    .portrait {
+        position: relative;
+        animation: anim_p_slidein 0.3s
+    }
+
+    @keyframes anim_p_slidein {
+	    from {
+            top: -1000px;
+	    }
+	    to {
+            top: 0px;
+	    }
+	}
+
+    .portrait_text {
+        position: absolute;
+
+        top: 64px;
+        left: 256px;
+
+        font-size: 28px;
+		font-family: monospace;
+        text-align: justify;
+        font-weight: 600;
+        /*line-height: 37px;*/
+
+        animation: anim_ptext_slidein 0.3s
+    }
+
+    @keyframes anim_ptext_slidein {
+	    from {
+            top: -1000px;
+	    }
+	    to {
+            top: 64px;
+	    }
+	}
+
+    #infobox {
+        animation: anim_wrapper_slidein 0.7s
+    }
+
+    /* wrapper slide-in animation */
+	@keyframes anim_wrapper_slidein {
+	    from {
+	        margin-left: -100%;
+            width: 0;
+	    }
+	    to {
+	        margin-left: 0%;
+            width: 100%;
+	    }
+	}
+
+
+</style>
+
+
+</head>
+
+<!-- Background -->
+<div id="background"> </div>
+
+<!-- HTML -->
+<body>
+
+    <div id="wrapper">
+
+        <img class="portrait" src="img/about/portrait.png">
+
+        <font class="portrait_text" color="white">
+            ROBIN J FIELD
+            <br></br>
+            DoB: <font color="yellow">02 12 1998</font>
+            <br>
+            LVL: <font color="yellow">20</font> <font color="white">Next: <font color="yellow">98974</font></font>
+            <br>
+            <!--
+            XP:&nbsp; <font color="yellow"> 26 <font color="white"> / <font color="yellow"> 992344767</font></font></font>
+            <br>
+            -->
+            HP:&nbsp; <font color="yellow"> 3 <font color="white"> / <font color="yellow"> 120</font></font></font>
+        </font>
+
+
+
+        <div id="infobox" class="dbox">
+            <font color="white">
+                <span class="dbox">
+                &nbsp;&nbsp; BIO &nbsp;&nbsp;
+                </span>
+                <br></br>
+                &nbsp;&nbsp; My name's Robin and I'm a big, big fan of making games!
+                <br></br>
+                &nbsp;&nbsp; From design to programming to music to art; I love it all, baby!
+                <br></br>
+
+            </font>
+        </div>
+
+        <br><br><br><br><br>
+
+        <div id="infobox" class="dbox">
+            <font color="white">
+                <span class="dbox">
+                &nbsp;&nbsp; SKILLS &nbsp;&nbsp;
+                </span>
+                <br><br><br>
+                <span>  <!-- GML SKILL -->
+                    &nbsp;&nbsp;
+                    <span class="dbox">
+                        GML
+                    </span>
+                    &nbsp;&nbsp;
+                    4 Years
+                    <br><br>
+                    &nbsp;&nbsp;
+                    <span class="dbox">
+                         <img src="img/about/progbar_yellow.png">
+                         <img src="img/about/progbar_yellow.png">
+                         <img src="img/about/progbar_yellow.png">
+                         <img src="img/about/progbar_yellow.png">
+                         <img src="img/about/progbar_yellow.png">
+                         <img src="img/about/progbar_half.png">
+                    </span>
+                </span>
+                <br><br><br>
+                <span>  <!-- CSS/HTML SKILL -->
+                    &nbsp;&nbsp;
+                    <span class="dbox">
+                        CSS/HTML
+                    </span>
+                    &nbsp;&nbsp;
+                    < 1 Year
+                    <br><br>
+                    &nbsp;&nbsp;
+                    <span class="dbox">
+                         <img src="img/about/progbar_yellow.png">
+                         <img src="img/about/progbar_yellow.png">
+                         <img src="img/about/progbar_half.png">
+                         <img src="img/about/progbar_blank.png">
+                         <img src="img/about/progbar_blank.png">
+                         <img src="img/about/progbar_blank.png">
+                    </span>
+                </span>
+                <br><br><br>
+                <span>  <!-- Javascript -->
+                    &nbsp;&nbsp;
+                    <span class="dbox">
+                        JavaScript
+                    </span>
+                    &nbsp;&nbsp;
+                    < 1 Year
+                    <br><br>
+                    &nbsp;&nbsp;
+                    <span class="dbox">
+                         <img src="img/about/progbar_yellow.png">
+                         <img src="img/about/progbar_yellow.png">
+                         <img src="img/about/progbar_blank.png">
+                         <img src="img/about/progbar_blank.png">
+                         <img src="img/about/progbar_blank.png">
+                         <img src="img/about/progbar_blank.png">
+                    </span>
+                </span>
+                <br><br><br>
+                <span>  <!-- C# -->
+                    &nbsp;&nbsp;
+                    <span class="dbox">
+                        C#
+                    </span>
+                    &nbsp;&nbsp;
+                    < 1 Year
+                    <br><br>
+                    &nbsp;&nbsp;
+                    <span class="dbox">
+                         <img src="img/about/progbar_yellow.png">
+                         <img src="img/about/progbar_yellow.png">
+                         <img src="img/about/progbar_half.png">
+                         <img src="img/about/progbar_blank.png">
+                         <img src="img/about/progbar_blank.png">
+                         <img src="img/about/progbar_blank.png">
+                    </span>
+                </span>
+                <br><br><br>
+                <span>  <!-- Game Maker Studio 2 -->
+                    &nbsp;&nbsp;
+                    <span class="dbox">
+                        Game Maker Studio 2
+                    </span>
+                    &nbsp;&nbsp;
+                    3 Years
+                    <br><br>
+                    &nbsp;&nbsp;
+                    <span class="dbox">
+                         <img src="img/about/progbar_yellow.png">
+                         <img src="img/about/progbar_yellow.png">
+                         <img src="img/about/progbar_yellow.png">
+                         <img src="img/about/progbar_yellow.png">
+                         <img src="img/about/progbar_yellow.png">
+                         <img src="img/about/progbar_half.png">
+                    </span>
+                </span>
+
+
+                <br><br><br>
+            </font>
+
+        </div>
+
+        <br><br><br>
+
+        <!--
+        <div id="infobox" class="dbox">
+            <font color="white">
+                <span class="dbox">
+                &nbsp;&nbsp; EDUCATION &nbsp;&nbsp;
+
+            </font>
+        </div>
+        -->
+
+    </div>
+
+    <!-- Nav Options -->
+    <div id="navlist">
+    	<navopt> <a href="front.html"> <img src="img/navopt_front.png"> </a> </navopt>
+    	<br>
+    	<navopt-selected> <img src="img/navopt_about.png"> </navopt-selected>
+    	<br>
+    	<navopt> <a href="art.html"> <img src="img/navopt_art.png"> </a> </navopt>
+    	<br>
+    	<navopt> <a href="games.html"> <img src="img/navopt_games.png"> </a> </navopt>
+    	<!--<br>
+    	<navopt> <a href="stats.html"> <img src="img/navopt_stats.png"> </a> </navopt>
+        -->
+    	<br>
+    	<navopt> <a href="contact.html"> <img src="img/navopt_contact.png"> </a> </navopt>
+    </div>
+
+</body>

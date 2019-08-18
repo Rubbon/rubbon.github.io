@@ -1,0 +1,81 @@
+/* This holds the info for the navigation list on pages other than the front one :) */
+
+/* Navigation options */
+#navlist{
+    position: fixed;
+    float: right;
+
+    margin-top: 3.5%;
+    margin-bot: 3.5%;
+    top: 0px;
+
+    /*margin-left: 80%;*/
+    right: 0;
+    width: 19.5%;
+    overflow: hidden;
+    /*
+    top: 50%;
+    -ms-transform: translateY(-50%);
+    transform: translateY(-50%);
+    */
+}
+
+/* Class for nav option */
+navopt {
+    transition-duration: 0.11s;
+    transition-timing-function: ease;
+    position: relative;
+    left: 240px;
+
+
+    /*Intro Animation*/
+    animation-duration: 0.5s;
+    animation-name: anim_navopt_slidein;
+    animation-iteration-count: 1;
+    animation-direction: normal;
+}
+
+/*
+navopt img {
+    width: 175%;
+    height: auto;
+}
+*/
+
+navopt:hover {
+    left: 160px;
+}
+
+/* ANimation for sliding in our navlist */
+@keyframes anim_navopt_slidein {
+    from {
+        left: 64px;
+    }
+
+    to {
+        left: 240px;
+    }
+}
+
+/* For the currently selected option */
+navopt-selected {
+    position: relative;
+    left: 200px;
+
+    /*Intro Animation*/
+    animation-duration: 0.5s;
+    animation-name: anim_navopt_s_slidein;
+    animation-iteration-count: 1;
+    animation-direction: normal;
+}
+
+/* ANimation for sliding in the selected nav option */
+@keyframes anim_navopt_s_slidein {
+    from {
+        left: 300px;
+    }
+
+    to {
+        left: 200px;
+    }
+}

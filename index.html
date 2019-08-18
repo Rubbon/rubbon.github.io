@@ -1,0 +1,266 @@
+<!doctype html>
+<html lang="en">
+
+<!-- Metadata/header -->
+<head>
+
+<meta charset="utf-8">
+
+<meta name="description" content="Robin Field's Cool Portfolio">
+<meta name="keywords" content="portfolio, robin, robinfield, littlelands, cool, programming, pixelart, gamemaker">
+
+
+<title>Robin Field's Cool Portfolio</title>
+
+<!-- CSS -->
+<style>
+
+	/* define variables */
+	:root {
+		--d_txt: "Welcome to Robin Field's portfolio, traveller!";
+
+		/* Make it so you can't select everything */
+        -webkit-touch-callout: none;
+        -webkit-user-select: none;
+        -khtml-user-select: none;
+        -moz-user-select: none;
+        -ms-user-select: none;
+        user-select: none;
+	}
+
+	body{
+		width: 800;
+		height: 100%;
+		/*background: url(img/img_background.png); */
+		background-color: black;
+
+	}
+
+	#wrapper{
+		/*margin: 0 auto;*/
+		width: 80%;
+		height: 100%;
+
+	}
+
+	/* Navigation options */
+	#navlist{
+		position: absolute;
+		margin-top: 3.5%;
+		margin-bot: 3.5%;
+		margin-left: 80%;
+		width: 19.5%;
+		overflow: hidden;
+		top: 0px;
+	}
+
+	/* Class for nav option */
+	navopt {
+		transition-duration: 0.1s;
+		transition-timing-function: ease;
+		position: relative;
+		left: 64px;
+
+		/*Intro Animation*/
+	    animation-duration: 0.5s;
+	    animation-name: anim_navopt_slidein;
+	    animation-iteration-count: 1;
+	    animation-direction: normal;
+	}
+
+	navopt:hover {
+		left: 0px;
+	}
+
+	/* Navlist slide-in animation */
+	@keyframes anim_navopt_slidein {
+	    from {
+	        left: 240px;
+	    }
+	    to {
+	        left: 64px;
+	    }
+	}
+
+
+
+	/* The box to contain the dialogue */
+	#dialogue_box {
+		margin-left: 19%;
+		margin-right: 37%;
+		/*margin-top: 17%;*/
+		margin-top: 324px;
+		/* nineslice */
+		border-image: url(img/dbox_nineslice.png) 20 fill repeat;
+		border-image-width: 20px;
+		border-image-outset: 32px;
+
+		animation: anim_dbox_slidein 0.5s
+
+	}
+
+	/* ANimation for dialoguebox sliding in */
+	@keyframes anim_dbox_slidein {
+		from {
+			margin-left: 0%;
+			margin-right: 100%;
+		}
+
+		to {
+			marin-left: 10%;
+			margin-right: 37%;
+		}
+	}
+
+	/* Dialogue for the pointer to say */
+	#dialogue {
+
+		margin-top: 20%;
+		position: relative;
+		font-size: 32px;
+		font-family: Arial;
+
+		overflow: hidden;
+	}
+
+	/*ANimation class to start the animation */
+	.d_animate {
+		white-space: nowrap;
+		animation: anim_typeout 1s steps(100, end);
+	}
+
+	/* ANimation for gradually typing out or dialogue */
+	@keyframes anim_typeout {
+		from {
+			width: 0%;
+		}
+
+		to {
+			width: 100%;
+		}
+	}
+
+
+	/* Animation for our floaty pointer lass */
+	testanim {
+		margin-left: 40%;
+		position: relative;
+		animation-duration: 2s;
+		animation-name: slidein;
+		animation-iteration-count: infinite;
+		animation-direction: alternate-reverse;
+	}
+
+	@keyframes slidein {
+		from {
+			/*top: 95%;*/
+			top: 304px;
+		}
+
+		to {
+			/*top: 86%*/
+			top: 288px;
+		}
+
+	}
+
+	/* ^ ^ ^ ^ */
+
+	/* Class for the lass' table */
+	.table {
+
+		position: relative;
+		top: 250px;
+		margin-left:35%;
+
+	}
+
+	#footer{
+
+		width:100%;
+		height: 20px;
+		text-align: center;
+
+	}
+
+	</style>
+
+
+</head>
+
+
+
+<!-- HTML -->
+<body>
+
+<div id="wrapper"> <!-- This is the page everything is inside of -->
+
+	<!-- Our Nice floaty pointer lass -->
+	<testanim>
+			<a href="dead.html"><img id="img_pointer" onmouseover="DialogueUpdate('Don`t touch the merchandise!\n\n');ChangeImgSrc(img_pointer,'img/pointer_1_angry.png')" onmouseout="DialogueUpdate('Now what do you want?\n\n')" src="img/pointer_1_animated.gif"></a>
+	</testanim>
+
+	<!-- Our Nice Floaty Pointer Lass' Table -->
+	<img class="table" src="img/pointer_table.png">
+
+</div>
+
+<!-- Nav Options -->
+<div id="navlist">
+	<navopt> <img onmouseover="DialogueUpdate('This will bring you right back to me if you get lost!\n\n');ChangeImgSrc(img_pointer,'img/pointer_1_pleased.png')" onmouseout="DialogueUpdate('How may I help you?\n\n');ChangeImgSrc(img_pointer,'img/pointer_1_animated.gif')" src="img/navopt_front.png"> </navopt>
+	<br>
+	<navopt> <a href="about.html"> <img onmouseover="DialogueUpdate('Go here for the hard facts and information.\n\n');ChangeImgSrc(img_pointer,'img/pointer_1_pleased.png')" onmouseout="DialogueUpdate('How may I help you?\n\n');ChangeImgSrc(img_pointer,'img/pointer_1_animated.gif')" src="img/navopt_about.png"> </a> </navopt>
+	<br>
+	<navopt> <a href="art.html"> <img onmouseover="DialogueUpdate('This heads over to the art zone!\n\n');ChangeImgSrc(img_pointer,'img/pointer_1_pleased.png')" onmouseout="DialogueUpdate('How may I help you?\n\n');ChangeImgSrc(img_pointer,'img/pointer_1_animated.gif')" src="img/navopt_art.png"> </a> </navopt>
+	<br>
+	<navopt> <a href="games.html"> <img onmouseover="DialogueUpdate('An ocean of games await!\n\n');ChangeImgSrc(img_pointer,'img/pointer_1_pleased.png')" onmouseout="DialogueUpdate('How may I help you?\n\n');ChangeImgSrc(img_pointer,'img/pointer_1_animated.gif')" src="img/navopt_games.png"> </a> </navopt>
+	<!--<br>
+	<navopt> <a href="stats.html"> <img onmouseover="DialogueUpdate('Check out some stats!\n\n');ChangeImgSrc(img_pointer,'img/pointer_1_pleased.png')" onmouseout="DialogueUpdate('How may I help you?\n\n');ChangeImgSrc(img_pointer,'img/pointer_1_animated.gif')" src="img/navopt_stats.png"> </a> </navopt>
+	-->
+	<br>
+	<navopt> <a href="contact.html"> <img onmouseover="DialogueUpdate('Want to get in touch?\n\n');ChangeImgSrc(img_pointer,'img/pointer_1_love.gif')" onmouseout="DialogueUpdate('How may I help you?\n\n');ChangeImgSrc(img_pointer,'img/pointer_1_animated.gif')" src="img/navopt_contact.png"> </a> </navopt>
+</div>
+
+<!-- Dialogue box and dialogue stuff goes here -->
+<div id="dialogue_box">
+	<div id="dialogue">
+
+		<!-- Dialogue -->
+		<font color="white"><span id="dspan"> Welcome to Robin Field's portfolio, traveller! <br><br> How may I help you? </span></font>
+		<br> <!-- < This is a linebreak, before I forget -->
+		<!-- &nbsp;   < forces a space   -->
+		<!--<font color="white">>> How may I help you?</font>-->
+	</div>
+</div>
+
+
+</body>
+</html>
+
+
+
+
+
+
+<!-- This is where any javascript goes baby -->
+<script>
+
+document.getElementById("dialogue").className = "d_animate";
+
+function StartAnimation(){
+	document.getElementById("dialogue").className = "d_animate";
+}
+
+function DialogueUpdate(_d_txt) {
+	//dspan.innerText = "bopppo!";
+	//var dtext = window.getComputedStyle(document.documentElement).getPropertyValue('--d_txt');
+	dspan.innerText = _d_txt;
+	document.getElementById("dialogue").className = "";
+	setTimeout(StartAnimation, 1);
+}
+
+function ChangeImgSrc(_id,_img){
+	_id.src = _img;
+}
+
+</script>
