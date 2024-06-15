@@ -3,569 +3,151 @@
 
 <!-- Metadata/header -->
 <head>
+	<meta charset="utf-8">
+    
+	<title>Robin Field's Portfolio (ABOUT)</title>
 
-<meta charset="utf-8">
-
-<meta name="description" content="Robin Field's Cool Portfolio">
-<meta name="keywords" content="portfolio, robin, robinfield, littlelands, cool, programming, pixelart, gamemaker">
-
-
-<title>Robin Field's Portfolio - ABOUT</title>
-
-<!-- Get navlist -->
-<link rel="stylesheet" href="navlist.css">
-
-<!-- CSS -->
-<style>
-
-    :root {
-        /* Make it so you can't select everything */
-        -webkit-touch-callout: none;
-        -webkit-user-select: none;
-        -khtml-user-select: none;
-        -moz-user-select: none;
-        -ms-user-select: none;
-        user-select: none;
-    }
-
-    body{
-		width: 800;
-		height: 100%;
-		/*background: url(img/img_background.png); */
-		background-color: black;
-	}
-
-    #background {
-        z-index: -1;
-        position:fixed;
-        bottom: 0%;
-        width: 100%;
-        height: 448px;
-        background-image: url("img/bg_dither.png");
-        background-repeat: repeat-x;
-        background-position: bottom;
-
-        animation: anim_background_slidein 0.4s
-    }
-
-    /* background slide-in */
-	@keyframes anim_background_slidein {
-	    from {
-	        bottom: -100%;
-	    }
-	    to {
-	        bottom: 0%;
-	    }
-	}
-
-    #wrapper {
-        margin-top: 2%;
-        margin-left: 2%;
-        width: 75%;
-        height: 100%;
-    }
-
-    .dbox {
-        position: relative;
-
-        border-image: url(img/dbox_nineslice.png) 20 fill repeat;
-		border-image-width: 20px;
-		border-image-outset: 16px;
-
-        font-size: 28px;
-		font-family: Arial;
-        text-align: justify;
-    }
-
-    .dboxFade {
-        position: relative;
-
-        border-image: url(img/dbox_nineslice_leftfade.png) 20 fill repeat;
-		border-image-width: 20px;
-		border-image-outset: 16px;
-
-        font-size: 28px;
-		font-family: Arial;
-        text-align: justify;
-    }
-
-    .portrait {
-        position: relative;
-        animation: anim_p_slidein 0.3s
-    }
-
-    @keyframes anim_p_slidein {
-	    from {
-            top: -1000px;
-	    }
-	    to {
-            top: 0px;
-	    }
-	}
-
-    .portrait_text {
-        position: absolute;
-
-        top: 64px;
-        left: 256px;
-
-        font-size: 28px;
-		font-family: monospace;
-        text-align: justify;
-        font-weight: 600;
-        /*line-height: 37px;*/
-
-        animation: anim_ptext_slidein 0.3s
-    }
-
-    @keyframes anim_ptext_slidein {
-	    from {
-            top: -1000px;
-	    }
-	    to {
-            top: 64px;
-	    }
-	}
-
-    #infobox {
-        animation: anim_wrapper_slidein 0.7s
-    }
-
-    /* wrapper slide-in animation */
-	@keyframes anim_wrapper_slidein {
-	    from {
-	        margin-left: -100%;
-            width: 0;
-	    }
-	    to {
-	        margin-left: 0%;
-            width: 100%;
-	    }
-	}
-
-
-</style>
-
-
+	<link rel="stylesheet" href="style_base.css">
+	<script src="navbar.js" type="text/javascript" defer></script>
 </head>
 
-<!-- Background -->
-<div id="background"> </div>
-
-<!-- HTML -->
 <body>
+	<div id="page-wrapper">
+		<div class="portrait">
+			<img src="img/about/portrait.png">
+			<font class="portrait_text" color="white">
+				ROBIN J FIELD
+				<br></br>
+				<br>
+				LVL: <font color="yellow">25</font> &nbsp; <font color="white">Next: <font color="yellow">98974</font></font>
+				<br>
+				<!--
+				XP:&nbsp; <font color="yellow"> 26 <font color="white"> / <font color="yellow"> 992344767</font></font></font>
+				<br>
+				-->
+				HP:&nbsp; <font color="yellow"> 3 <font color="white"> / <font color="yellow"> 120</font></font></font>
+			</font>
+		</div>
+        <div class="game_catbox">
+			My name's Robin, I'm a bald yorkshire bloke.
+			<br>
+			&nbsp;
+			<br>
+			I've been working on games since I was a kid; and have been doing so professionally for around 3 years.
+		</div>
 
-    <div id="wrapper">
+		<!-- SKILLS -->
+		<div class="infobar_toptxt"> Often Used Skills </div>
+		<br>
 
-        <img class="portrait" src="img/about/portrait.png">
+		<div class="game_list">
+			<div class="skill_box">
+				<div id="skill_box_title"> Programming Languages </div>	
+				<li> C++ 
+				</li>
+				<li>C#	
+				</li>
+				<li>Java
+				</li>
+				<li>GML
+				</li>
+				<li>html5
+				</li>
+				<li>CSS
+				</li>
+				<li>GLSL
+				</li>
+			</div>
+			<div class="skill_box">
+				<div id="skill_box_title"> Engines / Libraries </div>
+				<li> SDL2
+				</li>
+				<li> OpenGL (GLEW / GLM)
+				</li>
+				<li> Game Maker Studio 2
+				</li>
+				<li> OpenJDK
+				</li>
+				<li> MonoGame / XNA
+				</li>
+				<li> OpenAL
+				</li>
+				<li> Enet
+				</li>
+			</div>
+		</div>
 
-        <font class="portrait_text" color="white">
-            ROBIN J FIELD
-            <br></br>
-            DoB: <font color="yellow">02 12 1998</font>
-            <br>
-            LVL: <font color="yellow">23</font> <font color="white">Next: <font color="yellow">98974</font></font>
-            <br>
-            <!--
-            XP:&nbsp; <font color="yellow"> 26 <font color="white"> / <font color="yellow"> 992344767</font></font></font>
-            <br>
-            -->
-            HP:&nbsp; <font color="yellow"> 3 <font color="white"> / <font color="yellow"> 120</font></font></font>
-        </font>
+		<!-- WORK -->
+		<br>
+		<div class="infobar_toptxt"> Recent Work </div>
+		<br>
 
+        <div class="about_job_box">
+			<div class="job_companybox">
+				Triple Eye Games
+			</div>
+			<div class="job_infobox">
+				<div id="job_infobox_title"> Lead Programmer, Technical Artist </div>
+				<div id="job_infobox_info"> 
+					C++, GMS2, 
+					<a href="https://tripleeyegames.com/devlog-hub" style="text-decoration:none"><font color="#FF6D69" onmouseover="this.color='white'" onmouseout="this.color='#FF6D69'">Devlogs</font></a>
+				</div>
+			</div>
+			<div class="job_datebox">
+				<div id="job_datestart"> <div>April</div> <div>2022</div> </div>
+				<div id="job_dateend"> <div>Present</div> </div>
+			</div>
+		</div>
 
+        <div class="about_job_box">
+			<div class="job_companybox">
+				YLO
+			</div>
+			<div class="job_infobox">
+				<div id="job_infobox_title"> Software/Front End Developer </div>
+				<div id="job_infobox_info"> React, React Native </div>
+			</div>
+			<div class="job_datebox">
+				<div id="job_datestart"> <div>February</div> <div>2021</div> </div>
+				<div id="job_dateend"> <div>April</div> <div>2022</div> </div>
+			</div>
+		</div>
 
-        <div id="infobox" class="dbox">
-            <font color="white">
-                <span class="dbox">
-                &nbsp;&nbsp; BIO &nbsp;&nbsp;
-                </span>
-                <br></br>
-                &nbsp;&nbsp; My name's Robin, I'm bald and a big, big fan of making games!
-                <br></br>
-                &nbsp;&nbsp; From design to programming to music to art; I love it all, baby!
-                <br></br>
-                &nbsp;&nbsp; What I don't like doing is writing about myself...
-                <br></br>
-            </font>
-        </div>
+        <div class="about_job_box">
+			<div class="job_companybox">
+				Alternative Software
+			</div>
+			<div class="job_infobox">
+				<div id="job_infobox_title"> Game Porting / Design Assistant </div>
+				<div id="job_infobox_info"> Worked on Skool Daze Reskooled & Rugby Union Team Manager 3 </div>
+			</div>
+			<div class="job_datebox">
+				<div id="job_datestart"> <div>February</div> <div>2020</div> </div>
+				<div id="job_dateend"> <div>July</div> <div>2020</div> </div>
+			</div>
+		</div>
 
-        <br><br><br><br><br>
+        <div class="about_job_box">
+			<div class="job_companybox">
+				Hobfield
+			</div>
+			<div class="job_infobox">
+				<div id="job_infobox_title"> Freeware game studio run by me and a friend. </div>
+				<div id="job_infobox_info"> Over 19 games released and ~154,000 views across our <a href="https://tripleeyegames.com/devlog-hub" style="text-decoration:none"><font color="#FF6D69" onmouseover="this.color='white'" onmouseout="this.color='#FF6D69'">page</font></a>. </div>
+			</div>
+			<div class="job_datebox">
+				<div id="job_datestart"> <div>June</div> <div>2013</div> </div>
+				<div id="job_dateend"> <div>Present</div> </div>
+			</div>
+		</div>
 
-        <!-- programming lkanguages -->
-        <div id="infobox" class="dbox">
-            <font color="white">
-                <span class="dbox">
-                &nbsp;&nbsp; SKILLS &nbsp;&nbsp;
-                </span>
-                &nbsp;&nbsp;&nbsp;
-                <span class="dbox">
-                &nbsp;&nbsp; PROGRAMMING LANGUAGES &nbsp;&nbsp;
-                </span>
-                <br><br><br>
-                <span>  <!-- GML SKILL -->
-                    &nbsp;&nbsp;
-                    <span class="dbox">
-                        GML
-                    </span>
-                    <br><br>
-                    &nbsp;&nbsp;
-                    <span class="dbox">
-                         <img src="img/about/progbar_yellow.png">
-                         <img src="img/about/progbar_yellow.png">
-                         <img src="img/about/progbar_yellow.png">
-                         <img src="img/about/progbar_yellow.png">
-                         <img src="img/about/progbar_yellow.png">
-                         <img src="img/about/progbar_half.png">
-                    </span>
-                    &nbsp;&nbsp;&nbsp;&nbsp;
-                    <span class="dboxFade">
-                        &nbsp;7 Years&nbsp;
-                    </span>
-                </span>
-                <br><br><br>
-                <span>  <!-- CSS/HTML SKILL -->
-                    &nbsp;&nbsp;
-                    <span class="dbox">
-                        CSS/HTML5/JS
-                    </span>
-                    <br><br>
-                    &nbsp;&nbsp;
-                    <span class="dbox">
-                         <img src="img/about/progbar_yellow.png">
-                         <img src="img/about/progbar_yellow.png">
-                         <img src="img/about/progbar_yellow.png">
-                         <img src="img/about/progbar_blank.png">
-                         <img src="img/about/progbar_blank.png">
-                         <img src="img/about/progbar_blank.png">
-                    </span>
-                    &nbsp;&nbsp;&nbsp;&nbsp;
-                    <span class="dboxFade">
-                        &nbsp;1 Year&nbsp;&nbsp;
-                    </span>
-                </span>
-                <br><br><br>
-                <span>  <!-- Javascript -->
-                    &nbsp;&nbsp;
-                    <span class="dbox">
-                        Java
-                    </span>
-                    <br><br>
-                    &nbsp;&nbsp;
-                    <span class="dbox">
-                         <img src="img/about/progbar_yellow.png">
-                         <img src="img/about/progbar_yellow.png">
-                         <img src="img/about/progbar_yellow.png">
-                         <img src="img/about/progbar_blank.png">
-                         <img src="img/about/progbar_blank.png">
-                         <img src="img/about/progbar_blank.png">
-                    </span>
-                    &nbsp;&nbsp;&nbsp;&nbsp;
-                    <span class="dboxFade">
-                        &nbsp;1 Year&nbsp;&nbsp;
-                    </span>
-                </span>
-                <br><br><br>
-                <span>  <!-- C# -->
-                    &nbsp;&nbsp;
-                    <span class="dbox">
-                        C#
-                    </span>
-                    <br><br>
-                    &nbsp;&nbsp;
-                    <span class="dbox">
-                         <img src="img/about/progbar_yellow.png">
-                         <img src="img/about/progbar_yellow.png">
-                         <img src="img/about/progbar_yellow.png">
-                         <img src="img/about/progbar_half.png">
-                         <img src="img/about/progbar_blank.png">
-                         <img src="img/about/progbar_blank.png">
-                    </span>
-                    &nbsp;&nbsp;&nbsp;&nbsp;
-                    <span class="dboxFade">
-                        &nbsp;1 Year&nbsp;&nbsp;
-                    </span>
-                </span>
-                <br><br><br>
-                <span>  <!-- C++ -->
-                    &nbsp;&nbsp;
-                    <span class="dbox">
-                        C++
-                    </span>
-                    <br><br>
-                    &nbsp;&nbsp;
-                    <span class="dbox">
-                         <img src="img/about/progbar_yellow.png">
-                         <img src="img/about/progbar_yellow.png">
-                         <img src="img/about/progbar_yellow.png">
-                         <img src="img/about/progbar_blank.png">
-                         <img src="img/about/progbar_blank.png">
-                         <img src="img/about/progbar_blank.png">
-                    </span>
-                    &nbsp;&nbsp;&nbsp;&nbsp;
-                    <span class="dboxFade">
-                        &nbsp;2 Years&nbsp;&nbsp;
-                    </span>
-                </span>
+		<br>
+		<br>
+		<br>
+		<br>
 
+	</div>
 
-                <br><br><br>
-            </font>
-
-        </div>
-
-        <br><br><br>
-
-        <!-- engines -->
-        <div id="infobox" class="dbox">
-            <font color="white">
-                <span class="dbox">
-                &nbsp;&nbsp; SKILLS &nbsp;&nbsp;
-                </span>
-                &nbsp;&nbsp;&nbsp;
-                <span class="dbox">
-                &nbsp;&nbsp; ENGINES &nbsp;&nbsp;
-                </span>
-                <br><br><br>
-                <span>  <!-- Game Maker Studio 2 -->
-                    &nbsp;&nbsp;
-                    <span class="dbox">
-                        Game Maker Studio 2
-                    </span>
-                    <br><br>
-                    &nbsp;&nbsp;
-                    <span class="dbox">
-                         <img src="img/about/progbar_yellow.png">
-                         <img src="img/about/progbar_yellow.png">
-                         <img src="img/about/progbar_yellow.png">
-                         <img src="img/about/progbar_yellow.png">
-                         <img src="img/about/progbar_yellow.png">
-                         <img src="img/about/progbar_half.png">
-                    </span>
-                    &nbsp;&nbsp;&nbsp;&nbsp;
-                    <span class="dboxFade">
-                        &nbsp;4 Years&nbsp;
-                    </span>
-                </span>
-
-
-                <br><br><br>
-            </font>
-
-        </div>
-
-        <br><br><br>
-
-        <!-- libraries -->
-        <div id="infobox" class="dbox">
-            <font color="white">
-                <span class="dbox">
-                &nbsp;&nbsp; SKILLS &nbsp;&nbsp;
-                </span>
-                &nbsp;&nbsp;&nbsp;
-                <span class="dbox">
-                &nbsp;&nbsp; GAME LIBRARIES &nbsp;&nbsp;
-                </span>
-                <br><br><br>
-                <span>  <!-- SDL -->
-                    &nbsp;&nbsp;
-                    <span class="dbox">
-                        SDL 2 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; (C++)
-                    </span>
-                    <br><br>
-                    &nbsp;&nbsp;
-                    <span class="dbox">
-                         <img src="img/about/progbar_yellow.png">
-                         <img src="img/about/progbar_yellow.png">
-                         <img src="img/about/progbar_yellow.png">
-                         <img src="img/about/progbar_half.png">
-                         <img src="img/about/progbar_blank.png">
-                         <img src="img/about/progbar_blank.png">
-                    </span>
-                    &nbsp;&nbsp;&nbsp;&nbsp;
-                    <span class="dboxFade">
-                        &nbsp;2 Years&nbsp;
-                    </span>
-                </span>
-                <br><br><br>
-                <span>  <!-- OPENGL -->
-                    &nbsp;&nbsp;
-                    <span class="dbox">
-                        OpenGL &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; (C++)
-                    </span>
-                    <br><br>
-                    &nbsp;&nbsp;
-                    <span class="dbox">
-                         <img src="img/about/progbar_yellow.png">
-                         <img src="img/about/progbar_yellow.png">
-                         <img src="img/about/progbar_half.png">
-                         <img src="img/about/progbar_blank.png">
-                         <img src="img/about/progbar_blank.png">
-                         <img src="img/about/progbar_blank.png">
-                    </span>
-                    &nbsp;&nbsp;&nbsp;&nbsp;
-                    <span class="dboxFade">
-                        &nbsp;1 Year&nbsp;
-                    </span>
-                </span>
-                <br><br><br>
-                <span>  <!-- JAVA STANDARD LIBRARY -->
-                    &nbsp;&nbsp;
-                    <span class="dbox">
-                        OpenJDK &nbsp;&nbsp;&nbsp;&nbsp; (Java)
-                    </span>
-                    <br><br>
-                    &nbsp;&nbsp;
-                    <span class="dbox">
-                         <img src="img/about/progbar_yellow.png">
-                         <img src="img/about/progbar_yellow.png">
-                         <img src="img/about/progbar_half.png">
-                         <img src="img/about/progbar_blank.png">
-                         <img src="img/about/progbar_blank.png">
-                         <img src="img/about/progbar_blank.png">
-                    </span>
-                    &nbsp;&nbsp;&nbsp;&nbsp;
-                    <span class="dboxFade">
-                        &nbsp;&nbsp;1 Year&nbsp;&nbsp;
-                    </span>
-                </span>
-                <br><br><br>
-                <span>  <!-- Monogame/Xna -->
-                    &nbsp;&nbsp;
-                    <span class="dbox">
-                        MonoGame / Xna &nbsp;&nbsp;&nbsp;&nbsp; (C#)
-                    </span>
-                    <br><br>
-                    &nbsp;&nbsp;
-                    <span class="dbox">
-                         <img src="img/about/progbar_yellow.png">
-                         <img src="img/about/progbar_yellow.png">
-                         <img src="img/about/progbar_half.png">
-                         <img src="img/about/progbar_blank.png">
-                         <img src="img/about/progbar_blank.png">
-                         <img src="img/about/progbar_blank.png">
-                    </span>
-                    &nbsp;&nbsp;&nbsp;&nbsp;
-                    <span class="dboxFade">
-                        &nbsp;<1 Year&nbsp;
-                    </span>
-                </span>
-
-                <br><br><br>
-            </font>
-
-        </div>
-
-        <br><br><br>
-
-        <!-- Work Expeoicnece!! :) -->
-        <div id="infobox" class="dbox">
-            <font color="white">
-                <span class="dbox"> &nbsp;&nbsp; EXPERIENCE &nbsp;&nbsp; </span>
-                <br><br><br>
-
-                <span>  <!-- Alternative Software -->
-                    &nbsp;&nbsp;
-                    <span class="dbox">
-                        Alternative Software
-                    </span>
-                    &nbsp;&nbsp;&nbsp;
-                    <span class="dbox">
-                        &nbsp;
-                        <font color="yellow"> 16/02/2020 - 16/06/2020 </font>
-                        (16 Weeks)
-                        &nbsp;
-                    </span>
-                    &nbsp;&nbsp;&nbsp;
-                    <span class="dbox">
-                        &nbsp; Currently Under NDA &nbsp;
-                    </span>
-                    <br><br>
-                    <div id="infobox" class="dbox">
-                        <br><br>
-
-                        &nbsp;&nbsp;&nbsp; During my time at Alternative Software I was solely given the task to port and improve
-                        <br>
-                        &nbsp;&nbsp;&nbsp; an older project, that the team was intending to revitalise and update, to a 64 bit engine.
-                        <br><br>
-                        <font color="yellow"> &nbsp;&nbsp;&nbsp; Below I have detailed some of my tasks that I believe I am currently able to share. </font>
-
-
-                        <br><br><br><br>
-                        &nbsp;&nbsp; - Porting project from outdated engine to newer engine
-                        <br><br>
-                        &nbsp;&nbsp; - Redesigning and reprogramming ported systems that no longer functioned correctly
-                        <br><br>
-                        &nbsp;&nbsp; - Profiling and resolving resource intensive code
-                        <br><br>
-                        &nbsp;&nbsp; - Testing, debugging and fixing bugs/issues
-                        <br><br>
-                        &nbsp;&nbsp; - Redesigning and implementing new UI
-                        <br><br>
-                        &nbsp;&nbsp; - Redesigning few gameplay mechanics and game-feel
-                        <br><br>
-                        &nbsp;&nbsp; - Reimplementing controller input
-                        <br><br>
-                        &nbsp;&nbsp; - Editing and updating the main Alternative Software website
-                        <br><br><br>
-                    </div>
-                </span>
-                <br><br><br>
-                <span>  <!-- YLO -->
-                    &nbsp;&nbsp;
-                    <span class="dbox">
-                        YLO (React & React Native)
-                    </span>
-                    &nbsp;&nbsp;&nbsp;
-                    <span class="dbox">
-                        &nbsp;
-                        <font color="yellow"> 26/07/2021 - 23/09/2022 </font>
-                        &nbsp;
-                    </span>
-                    &nbsp;&nbsp;&nbsp;
-                    <br><br>
-                    <div id="infobox" class="dbox">
-                        <br><br>
-
-                        &nbsp;&nbsp;&nbsp;  While enjoying my wonderful time at YLO I was entrusted with many different areas,
-                        <br>
-                        &nbsp;&nbsp;&nbsp; although I spent the majority of my time working with React & React Native
-                        <br>
-
-                        <br>
-                        &nbsp;&nbsp;&nbsp; I was tasked with both designing and implementing front end features for both public websites,
-                        <br>
-                        &nbsp;&nbsp;&nbsp; apps and also company backend systems.
-                        <br>
-                        <br>
-                        &nbsp;&nbsp;&nbsp; The folks at YLO are more than happy to provide a reference, so do not be afraid to ask!
-                        <br><br><br>
-                    </div>
-                </span>
-
-                <br>
-
-            </font>
-        </div>
-
-        <br><br><br>
-
-    </div>
-
-    <!-- Nav Options -->
-    <div id="navlist">
-    	<navopt> <a href="index.html"> <img src="img/navopt_front.png"> </a> </navopt>
-    	<br>
-    	<navopt-selected> <img src="img/navopt_about.png"> </navopt-selected>
-    	<br>
-    	<navopt> <a href="art.html"> <img src="img/navopt_art.png"> </a> </navopt>
-    	<br>
-    	<navopt> <a href="games.html"> <img src="img/navopt_games.png"> </a> </navopt>
-    	<!--<br>
-    	<navopt> <a href="stats.html"> <img src="img/navopt_stats.png"> </a> </navopt>
-        -->
-    	<br>
-    	<navopt> <a href="contact.html"> <img src="img/navopt_contact.png"> </a> </navopt>
-    </div>
-
+	<jsc-navbar activeIndex=1></jsc-navbar>
 </body>
+</html>

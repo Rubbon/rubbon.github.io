@@ -1,322 +1,143 @@
 <!doctype html>
 <html lang="en">
 
-<!-- Metadata/header -->
+
 <head>
+	<meta charset="utf-8">
+    
+	<title>Robin Field's Portfolio (GAMES)</title>
 
-<meta charset="utf-8">
-
-<meta name="description" content="Robin Field's Cool Portfolio">
-<meta name="keywords" content="portfolio, robin, robinfield, littlelands, cool, programming, pixelart, gamemaker">
-
-
-<title>Robin Field's Portfolio - GAMES</title>
-
-<!-- Get navlist -->
-<link rel="stylesheet" href="navlist.css">
-
-<!-- CSS -->
-<style>
-
-    :root {
-        /* Make it so you can't select everything */
-        -webkit-touch-callout: none;
-        -webkit-user-select: none;
-        -khtml-user-select: none;
-        -moz-user-select: none;
-        -ms-user-select: none;
-        user-select: none;
-    }
-
-    body{
-		width: 800;
-		height: 100%;
-		/*background: url(img/img_background.png); */
-		background-color: black;
-	}
-
-    #background {
-        z-index: -1;
-        position:fixed;
-        bottom: 0%;
-        width: 100%;
-        height: 448px;
-        background-image: url("img/bg_dither.png");
-        background-repeat: repeat-x;
-        background-position: bottom;
-
-        animation: anim_background_slidein 0.6s
-    }
-
-    /* background slide-in */
-	@keyframes anim_background_slidein {
-	    from {
-	        bottom: -100%;
-	    }
-	    to {
-	        bottom: 0%;
-	    }
-	}
-
-
-    #wrapper {
-        margin-top: 2%;
-        margin-left: 10%;
-        width: 70%;
-        height: 100%;
-
-        animation: anim_wrapper_slidein 0.6s
-    }
-
-    /* wrapper slide-in animation */
-	@keyframes anim_wrapper_slidein {
-	    from {
-	        margin-left: -100%;
-	    }
-	    to {
-	        margin-left: 10%;
-	    }
-	}
-
-    .gamebox {
-        display: inline-block;
-        margin-bottom: 4%;
-        margin-left: 11.5%;
-
-        transition-duration: 0.1s;
-        transition-timing-function: ease;
-    }
-
-    .gamebox img {
-
-        /*margin-left: -0px;*/
-
-        transition-duration: 0.1s;
-        transition-timing-function: ease;
-    }
-
-    .gamebox:hover {
-        /*margin-top: 9%;*/
-    }
-
-    .gb_image:hover img {
-        filter: blur(2px) grayscale(60%);
-        -webkit-filter: blur(2px) grayscale(60%); /* Safari 6.0 - 9.0 */
-
-        -webkit-transform: scale(1.5);
-        transform: scale(1.5);
-    }
-
-    .gb_image {
-        width: 240px;
-        height: 320px;
-        overflow: hidden;
-
-        border-image: url(img/dbox_nineslice.png) 20 fill repeat;
-		border-image-width: 20px;
-		border-image-outset: 16px;
-
-    }
-
-    .gb_textbit {
-
-        position: relative;
-        width: 240px;
-        height: 40px;
-        bottom: -17px;
-
-        font-size: 32px;
-        text-align: center;
-		font-family: Arial;
-
-        border-image: url(img/dbox_nineslice.png) 20 fill repeat;
-		border-image-width: 20px;
-		border-image-outset: 16px;
-    }
-
-    .infobar_linebreak {
-        width: 100%;
-        height: 8px;
-        top: -8px;
-        position: relative;
-    }
-
-    .infobar_toptxt {
-		font-size: 32px;
-		font-family: Arial;
-        position: relative;
-        font-weight: bold;
-    }
-
-    .dbox {
-
-        position: relative;
-
-        border-image: url(img/dbox_nineslice.png) 20 fill repeat;
-		border-image-width: 20px;
-		border-image-outset: 16px;
-
-        font-size: 28px;
-		font-family: Arial;
-        text-align: justify;
-    }
-
-    .linkbox {
-        z-index: 100;
-        position: relative;
-        top: 70px;
-        left: 5px;
-
-        font-size: 30px;
-		font-family: fantasy;
-    }
-
-</style>
-
-
+	<link rel="stylesheet" href="style_base.css">
+	<script src="navbar.js" type="text/javascript" defer></script>
 </head>
 
 
-<!-- Background -->
-<div id="background"> </div>
-
-<!-- HTML -->
 <body>
+	<div id="dither_bg"></div>
+
+	<div id = "page-wrapper">
+		<div class="infobar_toptxt"> Premium Games </div>
+		<div class="game_catbox" style="margin-top: 10px; margin-bottom: 5%;">
+			I've been a lead programmer and pixel artist at Triple Eye Games since 2022, while none of the games I have worked on have released yet, you can see development logs 
+			<a href="https://tripleeyegames.com/devlog-hub" style="text-decoration:none"><font color="#FF6D69" onmouseover="this.color='white'" onmouseout="this.color='#FF6D69'">HERE!</font></a>
+		</div>
 
 
-    <!-- Ludum Dare Games -->
-    <div id="wrapper">
 
-        <font class="infobar_toptxt" color="white"> Ludum Dare </font>
-        <img class="infobar_linebreak" src = "img/linebreak.png">
-
-        <div class="dbox">
-            <font color="white">
-                <br>
-                &nbsp;&nbsp;&nbsp;&nbsp; Here is a collection of some of my <a href="https://ldjam.com/" style="text-decoration:none"> <font color="#FF6D69" onmouseover="this.color='white'" onmouseout="this.color='#FF6D69'">GAME JAM</font></a> games!
-                <br>
-                <br>
-                &nbsp;&nbsp;&nbsp;&nbsp; These free games were all made within around 72 hours with a specific theme.
-                <br>
-                <br>
-                &nbsp;&nbsp;&nbsp;&nbsp; My most popular LD game is
+		<div class="infobar_toptxt"> Jam Games </div>
+		<div class="game_catbox" style="margin-top: 10px;">
+			<div>
+				Here are a few of my jam games! Most of these were made within 72 hours for jams like 
+				<a href="https://ldjam.com/" style="text-decoration:none"><font color="#FF6D69" onmouseover="this.color='white'" onmouseout="this.color='#FF6D69'">LUDUM DARE</font></a>
+			</div>
+			<div>
+				<br>
+				My most popular LD game is
                 <a href="https://robinfield.itch.io/little-lands" style="text-decoration:none"> <font color="#FF6D69" onmouseover="this.color='white'" onmouseout="this.color='#FF6D69'">Little Lands</font></a>,
-                which won 3rd place out of over 19,800 entries and
-                <br>
-                &nbsp;&nbsp;&nbsp;&nbsp; has been featured in media like Rock Paper Shotgun and PC Gamer.
-                <br>
-                <br>
-                <br>
-                <br>
-                &nbsp;&nbsp;&nbsp;&nbsp; My most recent games all use a custom engine, usually written in C++ within the jam time!
-                <br>
-                <br>
-                &nbsp;&nbsp;&nbsp;&nbsp; See more of my personal game work <a href="https://robinfield.itch.io/" style="text-decoration:none"> <font color="#FF6D69" onmouseover="this.color='white'" onmouseout="this.color='#FF6D69'">HERE!</font></a>
-                <br>
-                <br>
-            </font>
-        </div>
+				which won 3rd place out of over 19,800 entries and has been featured in media like Rock Paper Shotgun and PC Gamer.
+			</div>
+		</div>
 
-        <br><br><br><br><br><br>
+		<!-- game boxes -->
+		<div class="game_list">
+			<div class="game_box">
+				<div class="game_box_image"> <a href="https://robinfield.itch.io/sage-summonion"> <img src = "img/gameart/ga_sagesummonion.gif"> </a> </div>
+				<div class="game_namebox"> Sage & Summonion </div>>
+			</div>
+			<div class="game_box">
+				<div class="game_box_image"> <a href="https://robinfield.itch.io/fred"> <img src = "img/gameart/ga_fred.gif"> </a> </div>
+				<div class="game_namebox"> F.R.E.D </div>>
+			</div>
+			<div class="game_box">
+				<div class="game_box_image"> <a href="https://robinfield.itch.io/deliver-from-the-dead"> <img src = "img/gameart/ga_dftd.gif"> </a> </div>
+				<div class="game_namebox"> Deliver From The Dead </div>>
+			</div>
+			<div class="game_box">
+				<div class="game_box_image"> <a href="https://robinfield.itch.io/sodium-season"> <img src = "img/gameart/ga_sodiumseason.gif"> </a> </div>
+				<div class="game_namebox"> Sodium Season </div>>
+			</div>
+			<div class="game_box">
+				<div class="game_box_image"> <a href="https://robinfield.itch.io/huthut"> <img src = "img/gameart/ga_huthut.gif"> </a> </div>
+				<div class="game_namebox"> HutHut </div>>
+			</div>
+			<div class="game_box">
+				<div class="game_box_image"> <a href="https://robinfield.itch.io/doc-noggin"> <img src = "img/gameart/ga_docnoggin.gif"> </a> </div>
+				<div class="game_namebox"> Dr Noggin </div>>
+			</div>
+			<div class="game_box">
+				<div class="game_box_image"> <a href="https://gamejolt.com/games/aethernet/639132"> <img src = "img/gameart/ga_aethernet.gif"> </a> </div>
+				<div class="game_namebox"> Aethernet </div>>
+			</div>
+			<div class="game_box">
+				<div class="game_box_image"> <a href="https://robinfield.itch.io/johnny-lootems-going-loopy"> <img src = "img/gameart/ga_jlgl.gif"> </a> </div>
+				<div class="game_namebox"> Johnny Lootem! </div>>
+			</div>
+			<div class="game_box">
+				<div class="game_box_image"> <a href="https://robinfield.itch.io/milk-trail"> <img src = "img/gameart/ga_milktrail.gif"> </a> </div>
+				<div class="game_namebox"> Milk Trail </div>>
+			</div>
+			<div class="game_box">
+				<div class="game_box_image"> 
+					<a href="https://robinfield.itch.io/dungscoot"> <img src = "img/gameart/ga_dungscoot.gif"> </a> 
+					<!-- links -->
+					<div class="game_linkbox">
+						<a class="game_link" href="https://www.pressreader.com/uk/pc-gamer-uk/20191212/281719796454119" style="text-decoration:none">
+							<font color="white" onmouseover="this.color='red'" onmouseout="this.color='white'"> PC GAMER </font>
+						</a>
+					</div>
+				</div>
+				<div class="game_namebox"> Dungscoot </div>>
+			</div>
+			<div class="game_box">
+				<div class="game_box_image"> <a href="https://robinfield.itch.io/plagued-station-2"> <img src = "img/gameart/ga_pstation22.gif"> </a> </div>
+				<div class="game_namebox"> Plagued Station 2 </div>>
+			</div>
+			<div class="game_box">
+				<div class="game_box_image"> 
+					<a href="https://robinfield.itch.io/little-lands"> <img src = "img/gameart/ga_littlelands.gif"> </a> 
+					<!-- links -->
+					<div class="game_linkbox">
+						<a class="game_link" href="https://www.pcgamer.com/free-games-of-the-week/74/" style="text-decoration:none">
+							<font color="white" onmouseover="this.color='red'" onmouseout="this.color='white'"> PC GAMER </font>
+						</a>
+						<div></div>
+						<a class="game_link" href="https://www.rockpapershotgun.com/2017/05/14/free-games-of-the-week-may14/" style="text-decoration:none">
+							<font color="white" onmouseover="this.color='violet'" onmouseout="this.color='white'"> RPS </font>
+						</a>
+					</div>
+				</div>
+				<div class="game_namebox"> Little Lands </div>>
+			</div>
+			<div class="game_box">
+				<div class="game_box_image"> 
+					<a href="https://robinfield.itch.io/city33"> <img src = "img/gameart/ga_city33.gif"> </a> 
+					<!-- links -->
+					<div class="game_linkbox">
+						<a class="game_link" href="https://superraregames.com/products/srg-mixtape-volume-4" style="text-decoration:none">
+							<font color="white" onmouseover="this.color='magenta'" onmouseout="this.color='white'"> SRG MIXTAPE </font>
+						</a>
+					</div>
+				</div>
+				<div class="game_namebox"> City33 </div>>
+			</div>
+			<div class="game_box">
+				<div class="game_box_image"> <a href="https://robinfield.itch.io/cronus-tomb-2"> <img src = "img/gameart/ga_ct2.gif"> </a> </div>
+				<div class="game_namebox"> Cronus' Tomb 2 </div>>
+			</div>
+			<div class="game_box">
+				<div class="game_box_image"> <a href="https://robinfield.itch.io/perpetual-quest"> <img src = "img/gameart/ga_pquest.gif"> </a> </div>
+				<div class="game_namebox"> Perpetual Quest </div>>
+			</div>
+			<div class="game_box">
+				<div class="game_box_image"> <a href="https://robinfield.itch.io/plagued-station"> <img src = "img/gameart/ga_pstation.gif"> </a> </div>
+				<div class="game_namebox"> Plagued Station </div>>
+			</div>
 
-        <div>
-            <div class="gamebox">
-                <div class="gb_image"> <a href="https://robinfield.itch.io/doc-noggin"> <img src = "img/gameart/ga_huthut.gif"> </a> </div>
-                <div class="gb_textbit"> <font color="white"> HutHut </font> </div>
-            </div>
-            <div class="gamebox">
-                <div class="gb_image"> <a href="https://robinfield.itch.io/doc-noggin"> <img src = "img/gameart/ga_docnoggin.gif"> </a> </div>
-                <div class="gb_textbit"> <font color="white"> Dr Noggin </font> </div>
-            </div>
-            <div class="gamebox">
-                <div class="gb_image"> <a href="https://gamejolt.com/games/aethernet/639132"> <img src = "img/gameart/ga_aethernet.gif"> </a> </div>
-                <div class="gb_textbit"> <font color="white"> Aethernet </font> </div>
-            </div>
-            <div class="gamebox">
-                <div class="gb_image"> <a href="https://robinfield.itch.io/johnny-lootems-going-loopy"> <img src = "img/gameart/ga_jlgl.gif"> </a> </div>
-                <div class="gb_textbit"> <font color="white"> Johnny Lootem! </font> </div>
-            </div>
-            <div class="gamebox">
-                <div class="gb_image"> <a href="https://robinfield.itch.io/milk-trail"> <img src = "img/gameart/ga_milktrail.gif"> </a> </div>
-                <div class="gb_textbit"> <font color="white"> Milk Trail </font> </div>
-            </div>
-
-            <div class="gamebox">
-                <div class="linkbox">
-                    <a href="https://www.pressreader.com/uk/pc-gamer-uk/20191212/281719796454119" style="text-decoration:none">
-                        <font color="white" onmouseover="this.color='gray'" onmouseout="this.color='white'"> PC GAMER </font>
-                    </a>
-                    &nbsp;&nbsp;<br>
-                    <font>  </font>
-                    &nbsp;&nbsp;<br>
-                </div>
-                <div class="gb_image"> <a href="https://robinfield.itch.io/dungscoot"> <img src = "img/gameart/ga_dungscoot.gif"> </a> </div>
-                <div class="gb_textbit"> <font color="white"> Dungscoot </font> </div>
-            </div>
-            <div class="gamebox">
-                <div class="gb_image"> <a href="https://robinfield.itch.io/plagued-station-2"> <img src = "img/gameart/ga_pstation22.gif"> </a> </div>
-                <div class="gb_textbit"> <font color="white"> PlaguedStation2 </font> </div>
-            </div>
-
-            <div class="gamebox">
-                <div class="linkbox">
-                    <a href="https://www.pcgamer.com/free-games-of-the-week/74/" style="text-decoration:none">
-                        <font color="white" onmouseover="this.color='red'" onmouseout="this.color='white'"> PC GAMER </font>
-                    </a>
-                    &nbsp;&nbsp;<br>
-                    <a href="https://www.rockpapershotgun.com/2017/05/14/free-games-of-the-week-may14/" style="text-decoration:none">
-                        <font color="white" onmouseover="this.color='violet'" onmouseout="this.color='white'"> RPS </font>
-                    </a>
-
-                </div>
-                <div class="gb_image"> <a href="https://robinfield.itch.io/little-lands"> <img src = "img/gameart/ga_littlelands.gif"> </a> </div>
-                <div class="gb_textbit"> <font color="white"> Little Lands </font> </div>
-            </div>
-            <div class="gamebox">
-                <div class="linkbox">
-                    <a href="https://superraregames.com/products/srg-mixtape-volume-4" style="text-decoration:none">
-                        <font color="white" onmouseover="this.color='magenta'" onmouseout="this.color='white'"> SRG MIXTAPE </font>
-                    </a>
-                    &nbsp;&nbsp;<br>
-                    <font>  </font>
-                    &nbsp;&nbsp;<br>
-                </div>
-                <div class="gb_image"> <a href="https://robinfield.itch.io/city33"> <img src = "img/gameart/ga_city33.gif"> </a> </div>
-                <div class="gb_textbit"> <font color="white"> City 33 </font> </div>
-            </div>
-            <br><br><br><br>
-            <div class="gamebox">
-                <div class="gb_image"> <a href="https://robinfield.itch.io/cronus-tomb-2"> <img src = "img/gameart/ga_ct2.gif"> </a> </div>
-                <div class="gb_textbit"> <font color="white"> Cronus' Tomb 2 </font> </div>
-            </div>
-            <div class="gamebox">
-                <div class="gb_image"> <a href="https://robinfield.itch.io/perpetual-quest"> <img src = "img/gameart/ga_pquest.gif"> </a> </div>
-                <div class="gb_textbit"> <font color="white"> Perpetual Quest </font> </div>
-            </div>
-            <div class="gamebox">
-                <div class="gb_image"> <a href="https://robinfield.itch.io/plagued-station"> <img src = "img/gameart/ga_pstation.gif"> </a> </div>
-                <div class="gb_textbit"> <font color="white"> Plagued Station </font> </div>
-            </div>
-        </div>
-
-    </div>
+		</div>
 
 
-
-    <!-- Nav Options -->
-    <div id="navlist">
-    	<navopt> <a href="index.html"> <img src="img/navopt_front.png"> </a> </navopt>
-    	<br>
-    	<navopt> <a href="about.html"> <img src="img/navopt_about.png"> </a> </navopt>
-    	<br>
-    	<navopt> <a href="art.html"> <img src="img/navopt_art.png"> </a> </navopt>
-    	<br>
-    	<navopt-selected> <img src="img/navopt_games.png"> </navopt-selected>
-    	<!--<br>
-    	<navopt> <a href="stats.html"> <img src="img/navopt_stats.png"> </a> </navopt>
-        -->
-    	<br>
-    	<navopt> <a href="contact.html"> <img src="img/navopt_contact.png"> </a> </navopt>
-    </div>
-
+	</div>
+	<!-- nav bar -->
+	<jsc-navbar activeIndex=2></jsc-navbar>
 </body>
+</html>

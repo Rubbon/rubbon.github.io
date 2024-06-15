@@ -3,328 +3,67 @@
 
 <!-- Metadata/header -->
 <head>
+	<meta charset="utf-8">
+    
+	<title>Robin Field's Portfolio (ART)</title>
 
-<meta charset="utf-8">
-
-<meta name="description" content="Robin Field's Cool Portfolio">
-<meta name="keywords" content="portfolio, robin, robinfield, littlelands, cool, programming, pixelart, gamemaker">
-
-
-<title>Robin Field's Portfolio - ART</title>
-
-<!-- Get navlist -->
-<link rel="stylesheet" href="navlist.css">
-
-<!-- CSS -->
-<style>
-
-    :root {
-        /* Make it so you can't select everything */
-        -webkit-touch-callout: none;
-        -webkit-user-select: none;
-        -khtml-user-select: none;
-        -moz-user-select: none;
-        -ms-user-select: none;
-        user-select: none;
-    }
-
-    body{
-        width: 800;
-        height: 100%;
-        /*background: url(img/img_background.png); */
-        background-color: black;
-    }
-
-    #background {
-        z-index: -1;
-        position:fixed;
-        bottom: 0%;
-        width: 100%;
-        height: 448px;
-        background-image: url("img/bg_dither.png");
-        background-repeat: repeat-x;
-        background-position: bottom;
-
-        animation: anim_background_slidein 0.4s
-    }
-
-    /* background slide-in */
-	@keyframes anim_background_slidein {
-	    from {
-	        bottom: -100%;
-	    }
-	    to {
-	        bottom: 0%;
-	    }
-	}
-
-    #wrapper {
-        width: 80%;
-        height: 100%;
-
-        /*This was for the dither background
-        background-image: url("img/bg_dither.png");
-        background-repeat: repeat-x;
-        background-position: bottom;
-        */
-
-        animation: anim_wrapper_slidein 0.4s
-    }
-
-    #title {
-        border-image: url(img/dbox_nineslice.png) 20 fill repeat;
-		border-image-width: 20px;
-		border-image-outset: 16px;
-
-        font-size: 28px;
-		font-family: Arial;
-        text-align: center;
-
-        margin-left: 25%;
-        margin-right: 25%;
-        margin-top: 5%;
-        margin-bottom: 5%;
-    }
-
-    /* wrapper slide-in animation */
-	@keyframes anim_wrapper_slidein {
-	    from {
-	        margin-left: -100%;
-	    }
-	    to {
-	        margin-left: 0%;
-	    }
-	}
-
-
-    .infobar_linebreak {
-        width: 100%;
-        height: 8px;
-        top: -8px;
-        position: relative;
-    }
-
-    .infobar_toptxt {
-		font-size: 32px;
-		font-family: Arial;
-        position: relative;
-    }
-
-    .imgrow {
-        display: -ms-flexbox; /* IE10 */
-        display: flex;
-        -ms-flex-wrap: wrap; /* IE10 */
-        flex-wrap: wrap;
-        padding: 0 4px;
-    }
-
-    .imgcol {
-        -ms-flex: 20%; /* IE10 */
-        flex: 20%;
-        max-width: 40%;
-        padding: 0 4px;
-    }
-
-    .imgcol img {
-        margin-top: 8px;
-        vertical-align: middle;
-        width: 100%;
-
-        transition-duration: 0.1s;
-        transition-timing-function: ease;
-    }
-
-    .imgcol img:hover {
-        /*
-        -webkit-filter: brightness(60%);
-        filter: brightness(60%);
-        */
-
-        -webkit-transform: scale(1.15);
-        transform: scale(1.15);
-    }
-
-    .collapsible {
-        font-size: 28px;
-        font-family: Arial;
-        text-align: left;
-
-        width: 20%;
-        height: 44px;
-        background-color: white;
-        color: black;
-        border: none;
-
-        position: relative;
-        margin-top: 2%;
-        left: -8px;
-
-        background-image: url(img/collapse_icon_1.png);
-        background-repeat: no-repeat;
-        background-position: right;
-
-        transition-duration: 0.1s;
-		transition-timing-function: ease;
-
-    }
-
-    .active, .collapsible:hover {
-        width: 105%;
-        background-image: url(img/collapse_icon_1.png);
-    }
-
-    .active:hover {
-        width: 110%;
-    }
-
-
-    .content {
-        background-color: black;
-        margin-top: 12px;
-
-        overflow: hidden;
-        max-height: 0;
-        transition: max-height 0.2s ease-out;
-        /*
-        border-image: url(img/dbox_nineslice.png) 20 fill repeat;
-		border-image-width: 20px;
-		border-image-outset: 16px;
-        */
-    }
-
-</style>
-
-
+	<link rel="stylesheet" href="style_base.css">
+	<script src="navbar.js" type="text/javascript" defer></script>
 </head>
 
-<div id="background"> </div>
-
-<!-- HTML -->
 <body>
+	<div id="dither_bg"></div>
 
-    <div id="wrapper">
+	<div id="page-wrapper">
+        <div class="art_box">
+			<div class="art_box_column">
+				<a target="_blank" href="img/art/personal/l&v_mock_2.png"> <img src="img/art/personal/l&v_mock_2.png"> </a>
+				<a target="_blank" href="img/art/pd/oblique_full.png"> <img src="img/art/pd/oblique_full.png"> </a>
+				<a target="_blank" href="img/art/personal/milktrail_3.png"> <img src="img/art/personal/milktrail_3.png"> </a>
+				<a target="_blank" href="img/art/personal/nicescreeny.png"> <img src="img/art/personal/nicescreeny.png"> </a>
+				<a target="_blank" href="img/art/personal/ll_titlecrawl.png"> <img src="img/art/personal/ll_titlecrawl.png"> </a>
+				<a target="_blank" href="img/art/personal/oldtram.png"> <img src="img/art/personal/oldtram.png"> </a>
+				<a target="_blank" href="img/art/personal/instaminer.png"> <img src="img/art/personal/instaminer.png"> </a>				
+				<a target="_blank" href="img/art/personal/pc88-style.png"> <img src="img/art/personal/pc88-style.png"> </a>
+				<a target="_blank" href="img/art/pd/pd_enemy_anim_3x.gif"> <img src="img/art/pd/pd_enemy_anim_3x.gif"> </a>
+				<a target="_blank" href="img/art/pd/pineapple_trio_2021.png"> <img src="img/art/pd/pineapple_trio_2021.png"> </a>
+				<a target="_blank" href="img/art/pd/32x24room gameified 4x.png"> <img src="img/art/pd/32x24room gameified 4x.png"> </a>
+			</div>
+			<div class="art_box_column">
+				<a target="_blank" href="img/art/personal/l&v_mock_ultima-style.png"> <img src="img/art/personal/l&v_mock_ultima-style.png"> </a>
+				<a target="_blank" href="img/art/pd/bleak_oblique.png"> <img src="img/art/pd/bleak_oblique.png"> </a>
+				<a target="_blank" href="img/art/personal/milktrail_2.png"> <img src="img/art/personal/milktrail_2.png"> </a>
+				<a target="_blank" href="img/art/personal/ll_tilelist.png"> <img src="img/art/personal/ll_tilelist.png"> </a>
+				<a target="_blank" href="img/art/personal/re_2d.png"> <img src="img/art/personal/re_2d.png"> </a>
+				<a target="_blank" href="img/art/personal/cstest2.png"> <img src="img/art/personal/cstest2.png"> </a>
+				<a target="_blank" href="img/art/personal/oldhorror1.png"> <img src="img/art/personal/oldhorror1.png"> </a>
+				<a target="_blank" href="img/art/pd/zelda1hp.gif"> <img src="img/art/pd/zelda1hp.gif"> </a>
+				<a target="_blank" href="img/art/pd/notepad_2021.png"> <img src="img/art/pd/notepad_2021.png"> </a>
+				<a target="_blank" href="img/art/pd/clockwork_city_4x.png"> <img src="img/art/pd/clockwork_city_4x.png"> </a>
+				<a target="_blank" href="img/art/personal/ll_1bit.png"> <img src="img/art/personal/ll_1bit.png"> </a>
+			</div>
+			<div class="art_box_column">
+				<a target="_blank" href="img/art/pd/outbreak_full.png"> <img src="img/art/pd/outbreak_full.png"> </a>
+				<a target="_blank" href="img/art/pd/stairs_full.png"> <img src="img/art/pd/stairs_full.png"> </a>
+				<a target="_blank" href="img/art/pd/castlevania_remake_2021.png"> <img src="img/art/pd/castlevania_remake_2021.png"> </a>
+				<a target="_blank" href="img/art/pd/hideout2.png"> <img src="img/art/pd/hideout2.png"> </a>
+				<a target="_blank" href="img/art/personal/starship.png"> <img src="img/art/personal/starship.png"> </a>
+				<a target="_blank" href="img/art/pd/pancakes_combined.png"> <img src="img/art/pd/pancakes_combined.png"> </a>
+				<a target="_blank" href="img/art/personal/ga_jlgl.png"> <img src="img/art/personal/ga_jlgl.png"> </a>
+				<a target="_blank" href="img/art/personal/scaryTower.png"> <img src="img/art/personal/scaryTower.png"> </a>
+				<a target="_blank" href="img/art/personal/sky2.png"> <img src="img/art/personal/sky2.png"> </a>
+				<a target="_blank" href="img/art/personal/junglebird.png"> <img src="img/art/personal/junglebird.png"> </a>
+				<a target="_blank" href="img/art/personal/rocktest_large_png_x2.png"> <img src="img/art/personal/rocktest_large_png_x2.png"> </a>
+				<a target="_blank" href="img/art/personal/predung.png"> <img src="img/art/personal/predung.png"> </a>
+			</div>
+			<!--
+				<a target="_blank" href="img/art/pd/grasstile 4x.png"> <img src="img/art/pd/grasstile 4x.png"> </a>
+				<a target="_blank" href="img/art/pd/hideout1.png"> <img src="img/art/pd/hideout1.png"> </a>
+				<a target="_blank" href="img/art/pd/sandfella_big.png"> <img src="img/art/pd/sandfella_big.png"> </a>
+			-->
+		</div>
+	</div>
 
-        <!-- Title goes here -->
-        <div id="title">
-            <font color="white">
-            ARTWORK
-            <br><br>
-            ( This page is currently a little incomplete )
-            <br>
-            </font>
-        </div>
-
-
-        <!-- PD info bar -->
-        <button class="collapsible"> Pixel Dailies </button>
-        <!-- Art goes here -->
-        <div class="content">
-            <div class="imgrow">
-                <div class="imgcol">
-                    <a target="_blank" href="img/art/pd/oblique_full.png"> <img src="img/art/pd/oblique_full.png"> </a>
-                    <a target="_blank" href="img/art/pd/pd_enemy_anim_3x.gif"> <img src="img/art/pd/pd_enemy_anim_3x.gif"> </a>
-                    <a target="_blank" href="img/art/pd/outbreak_full.png"> <img src="img/art/pd/outbreak_full.png"> </a>
-                    <a target="_blank" href="img/art/pd/32x24room gameified 4x.png"> <img src="img/art/pd/32x24room gameified 4x.png"> </a>
-                </div>
-
-                <div class="imgcol">
-                    <a target="_blank" href="img/art/pd/bleak_oblique.png"> <img src="img/art/pd/bleak_oblique.png"> </a>
-                    <a target="_blank" href="img/art/pd/castlevania_remake_2021.png"> <img src="img/art/pd/castlevania_remake_2021.png"> </a>
-                    <a target="_blank" href="img/art/pd/pineapple_trio_2021.png"> <img src="img/art/pd/pineapple_trio_2021.png"> </a>
-                    <a target="_blank" href="img/art/pd/hideout2.png"> <img src="img/art/pd/hideout2.png"> </a>
-                </div>
-
-                <div class="imgcol">
-                    <a target="_blank" href="img/art/pd/notepad_2021.png"> <img src="img/art/pd/notepad_2021.png"> </a>
-                    <a target="_blank" href="img/art/pd/hideout1.png"> <img src="img/art/pd/hideout1.png"> </a>
-                    <a target="_blank" href="img/art/pd/clockwork_city_4x.png"> <img src="img/art/pd/clockwork_city_4x.png"> </a>
-                    <a target="_blank" href="img/art/pd/zelda1hp.gif"> <img src="img/art/pd/zelda1hp.gif"> </a>
-                </div>
-
-                <div class="imgcol">
-                    <a target="_blank" href="img/art/pd/stairs_full.png"> <img src="img/art/pd/stairs_full.png"> </a>
-                    <a target="_blank" href="img/art/pd/pancakes_combined.png"> <img src="img/art/pd/pancakes_combined.png"> </a>
-                    <a target="_blank" href="img/art/pd/sandfella_big.png"> <img src="img/art/pd/sandfella_big.png"> </a>
-                    <a target="_blank" href="img/art/pd/grasstile 4x.png"> <img src="img/art/pd/grasstile 4x.png"> </a>
-                </div>
-
-            </div>
-        </div>
-
-        <button class="collapsible"> Pixel Art </button>
-        <!-- Art goes here -->
-        <div class="content">
-            <div class="imgrow">
-                <div class="imgcol">
-                    <a target="_blank" href="img/art/personal/l&v_mock_2.png"> <img src="img/art/personal/l&v_mock_2.png"> </a>
-                    <a target="_blank" href="img/art/personal/pc88-style.png"> <img src="img/art/personal/pc88-style.png"> </a>
-                    <a target="_blank" href="img/art/personal/starship.png"> <img src="img/art/personal/starship.png"> </a>
-                    <a target="_blank" href="img/art/personal/ll_1bit.png"> <img src="img/art/personal/ll_1bit.png"> </a>
-                    <a target="_blank" href="img/art/personal/sky2.png"> <img src="img/art/personal/sky2.png"> </a>
-                    <a target="_blank" href="img/art/personal/junglebird.png"> <img src="img/art/personal/junglebird.png"> </a>
-                    <a target="_blank" href="img/art/personal/ga_jlgl.png"> <img src="img/art/personal/ga_jlgl.png"> </a>
-                </div>
-
-                <div class="imgcol">
-                    <a target="_blank" href="img/art/personal/l&v_mock_ultima-style.png"> <img src="img/art/personal/l&v_mock_ultima-style.png"> </a>
-                    <a target="_blank" href="img/art/personal/nicescreeny.png"> <img src="img/art/personal/nicescreeny.png"> </a>
-                    <a target="_blank" href="img/art/personal/ll_titlecrawl.png"> <img src="img/art/personal/ll_titlecrawl.png"> </a>
-                    <a target="_blank" href="img/art/personal/ll_tilelist.png"> <img src="img/art/personal/ll_tilelist.png"> </a>
-                    <a target="_blank" href="img/art/personal/rocktest_large_png_x2.png"> <img src="img/art/personal/rocktest_large_png_x2.png"> </a>
-                    <a target="_blank" href="img/art/personal/scaryTower.png"> <img src="img/art/personal/scaryTower.png"> </a>
-                </div>
-
-                <div class="imgcol">
-                    <a target="_blank" href="img/art/personal/re_2d.png"> <img src="img/art/personal/re_2d.png"> </a>
-                    <a target="_blank" href="img/art/personal/oldhorror1.png"> <img src="img/art/personal/oldhorror1.png"> </a>
-                    <a target="_blank" href="img/art/personal/cstest2.png"> <img src="img/art/personal/cstest2.png"> </a>
-                    <a target="_blank" href="img/art/personal/oldtram.png"> <img src="img/art/personal/oldtram.png"> </a>
-                    <a target="_blank" href="img/art/personal/instaminer.png"> <img src="img/art/personal/instaminer.png"> </a>
-                    <a target="_blank" href="img/art/personal/predung.png"> <img src="img/art/personal/predung.png"> </a>
-                    <a target="_blank" href="img/art/personal/milktrail_3.png"> <img src="img/art/personal/milktrail_3.png"> </a>
-                    <a target="_blank" href="img/art/personal/milktrail_2.png"> <img src="img/art/personal/milktrail_2.png"> </a>
-                </div>
-
-
-
-            </div>
-        </div>
-
-        <br><br><br><br>
-
-    </div>
-    <!-- Nav Options -->
-    <div id="navlist">
-    	<navopt> <a href="index.html"> <img src="img/navopt_front.png"> </a> </navopt>
-    	<br>
-    	<navopt> <a href="about.html"> <img src="img/navopt_about.png"> </a> </navopt>
-    	<br>
-    	<navopt-selected> <img src="img/navopt_art.png"> </navopt-selected>
-    	<br>
-    	<navopt> <a href="games.html"> <img src="img/navopt_games.png"> </a> </navopt>
-    	<!--<br>
-    	<navopt> <a href="stats.html"> <img src="img/navopt_stats.png"> </a> </navopt>
-        -->
-    	<br>
-    	<navopt> <a href="contact.html"> <img src="img/navopt_contact.png"> </a> </navopt>
-    </div>
-
+	<jsc-navbar activeIndex=3></jsc-navbar>
 </body>
-
-
-<script>
-    var coll = document.getElementsByClassName("collapsible");
-    var i;
-
-    for (i = 0; i < coll.length; i++) {
-        coll[i].addEventListener("click", function() {
-            this.classList.toggle("active");
-            var content = this.nextElementSibling;
-            if (content.style.maxHeight){
-                content.style.maxHeight = null;
-            } else {
-                content.style.maxHeight = content.scrollHeight + "px";
-            }
-        });
-    }
-</script>
+</html>

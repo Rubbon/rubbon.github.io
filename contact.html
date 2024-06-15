@@ -3,185 +3,53 @@
 
 <!-- Metadata/header -->
 <head>
+	<meta charset="utf-8">
+    
+	<title>Robin Field's Portfolio (GAMES)</title>
 
-<meta charset="utf-8">
-
-<meta name="description" content="Robin Field's Cool Portfolio">
-<meta name="keywords" content="portfolio, robin, robinfield, littlelands, cool, programming, pixelart, gamemaker">
-
-
-<title>Robin Field's Portfolio - CONTACT</title>
-
-<!-- Get navlist -->
-<link rel="stylesheet" href="navlist.css">
-
-<!-- CSS -->
-<style>
-
-    :root {
-        /* Make it so you can't select everything */
-        -webkit-touch-callout: none;
-        -webkit-user-select: none;
-        -khtml-user-select: none;
-        -moz-user-select: none;
-        -ms-user-select: none;
-        user-select: none;
-    }
-
-    body{
-		width: 800;
-		height: 100%;
-		/*background: url(img/img_background.png); */
-		background-color: black;
-	}
-
-    #wrapper{
-		/*margin: 0 auto;*/
-        margin-left: 10%;
-		width: 80%;
-		height: 100%;
-
-        /* animate */
-		animation: anim_wrapper_slidein 0.4s
-	}
-
-    /* Navlist slide-in animation */
-	@keyframes anim_wrapper_slidein {
-	    from {
-	        margin-left: -100%;
-	    }
-	    to {
-	        margin-left: 10%;
-	    }
-	}
-
-
-    #infobar {
-        margin-top: 5%;
-    }
-
-    /* Email info */
-    email {
-
-    }
-
-    .infobar {
-        position: relative;
-        width: auto;
-        height: auto;
-    }
-    .infobar_linebreak {
-        width: 70%;
-        height: 8px;
-        top: -56px;
-        right: 8px;
-        position: relative;
-    }
-    .infobar_toptxt {
-		font-size: 32px;
-		font-family: Arial;
-        position: relative;
-
-        top: -85px;
-        right: 70%;
-    }
-    .infobar_bottomtxt {
-		font-size: 32px;
-		font-family: Arial;
-        position: relative;
-
-        top: -50px;
-        left: 8.4%;
-    }
-
-    .bigfont {
-        position: relative;
-        left: 8.4%;
-        font-size: 32px;
-		font-family: Arial;
-    }
-
-    hyperbut {
-        top: 12px;
-        position: relative;
-
-        transition-duration: 0.1s;
-        transition-timing-function: ease;
-    }
-
-    hyperbut:hover {
-        top: 0;
-    }
-
-</style>
-
+	<link rel="stylesheet" href="style_base.css">
+	<script src="navbar.js" type="text/javascript" defer></script>
 </head>
-
-
 
 <!-- HTML -->
 <body>
+	<div id="page-wrapper">
+		<div class = "contact_header">
+			<img src="img/icon_mail.png">
+			<text> GET IN TOUCH! </text>
+		</div>
 
-    <!-- For the Page -->
-    <div id="wrapper">
+		<div class="contact_header_bottomtxt">
+			Don't be afraid to get in contact if you:
+			<div style="color: #7CA7FF">
+				<br>
+				<li> Want to </li>
+				<!--
+				<li> Want to work with me on something 			</li>
+				<li> Have any questions about me or my projects </li>
+				<li> Are in the market for a really boring chat </li>
+				<li> Are an avid fan of Dawn of the Dead </li>
+				-->
+			</div>
+		</div>
 
-        <!-- Title bit -->
-        <div id="infobar">
-            <img class="infobar" src="img/icon_mail.png">
-            <img class="infobar_linebreak" src="img/linebreak.png">
-            <font class="infobar_toptxt" color="white"> GET IN TOUCH! </font>
-            <br>
-            <font class="bigfont" color="white">
-                Please feel free to get in contact if you:
-                <br><br>
-                 <span style="color: #7CA7FF">
-                      - Are interested in working with me
-                      <br>
-                      - Just want a chat
-                      <br>
-                      - Have an interest in the 1988 movie Short Circuit 2
-                      <br>
-                      - Are pretty cool
-                  </span>
-            </font>
-        </div>
-        <!-- Mail bit -->
-        <div id="infobar">
-            <img class="infobar" src="img/icon_mail.png">
-            <img class="infobar_linebreak" src="img/linebreak.png">
-            <font class="infobar_toptxt" color="white"> EMAIL </font>
-            <a href="mailto: robinjfield.business@outlook.com" style="text-decoration:none">
-                <font class="infobar_bottomtxt" color="#FF6D69" onmouseover="this.color='white'" onmouseout="this.color='#FF6D69'"> robinjfield.business@outlook.com </font>
-            </a>
-        </div>
-        <!-- Bonus links -->
-        <div id="infobar">
-            <hyperbut>
-            <a href="https://twitter.com/robinorwhatever" target="_blank" style="text-decoration:none"> <img src="img/icon_twitter.png"> </a>
-            </hyperbut>
-            <!--&emsp    < this forces an indentation -->
-            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-            <hyperbut>
-            <a href="https://robinfield.itch.io/" target="_blank" style="text-decoration:none"> <img src="img/icon_itch.png"> </a>;
-            </hyperbut>
-        </div>
+		<div class = "contact_header">
+			<img src="img/icon_mail.png">
+			<text> MAIL </text>
+		</div>
 
-    </div>
+		<div class="contact_header_bottomtxt">
+			<a href="mailto: robinjfield.business@outlook.com" style="text-decoration:none">
+				<font color="#FF6D69" onmouseover="this.color='white'" onmouseout="this.color='#FF6D69'"> robinjfield.business@outlook.com </font>
+			</a>
+		</div>
+		<div>
+			<a href="https://twitter.com/robinorwhatever" 					class="hyperbut" target="_blank"> <img src="img/icon_twitter.png"> 	</a>
+			<a href="https://robinfield.itch.io/" 							class="hyperbut" target="_blank"> <img src="img/icon_itch.png"> 	</a>
+			<a href="https://www.linkedin.com/in/robin-field-563a23158/" 	class="hyperbut" target="_blank"> <img src="img/icon_linkedin.png"> </a>
+		</div>
+	</div>
 
-    <!-- Nav Options -->
-    <div id="navlist">
-    	<navopt> <a href="index.html"> <img src="img/navopt_front.png"> </a> </navopt>
-    	<br>
-    	<navopt> <a href="about.html"> <img src="img/navopt_about.png"> </a> </navopt>
-    	<br>
-    	<navopt> <a href="art.html"> <img src="img/navopt_art.png"> </a> </navopt>
-    	<br>
-    	<navopt> <a href="games.html"> <img src="img/navopt_games.png"> </a> </navopt>
-    	<!--<br>
-    	<navopt> <a href="stats.html"> <img src="img/navopt_stats.png"> </a> </navopt>
-        -->
-    	<br>
-    	<navopt-selected> <img src="img/navopt_contact.png"> </navopt-selected>
-    </div>
-
+	<jsc-navbar activeIndex=4></jsc-navbar>
 </body>
+</html>
