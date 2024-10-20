@@ -19,7 +19,7 @@
 				ROBIN J FIELD
 				<br></br>
 				<br>
-				LVL: <font color="yellow">25</font> &nbsp; <font color="white">Next: <font color="yellow">98974</font></font>
+				LVL: <font id="my-age-txt" color="yellow">25</font> &nbsp; <font color="white">Next: <font color="yellow">98974</font></font>
 				<br>
 				<!--
 				XP:&nbsp; <font color="yellow"> 26 <font color="white"> / <font color="yellow"> 992344767</font></font></font>
@@ -38,42 +38,58 @@
 
 		<!-- SKILLS -->
 		<div class="infobar_toptxt"> Often Used Skills </div>
-		<br>
-
 		<div class="game_list">
 			<div class="skill_box">
 				<div id="skill_box_title"> Programming Languages </div>	
-				<li> C++ 
-				</li>
-				<li>C#	
-				</li>
-				<li>Java
-				</li>
-				<li>GML
-				</li>
-				<li>html5
-				</li>
-				<li>CSS
-				</li>
-				<li>GLSL
-				</li>
+				<a href="#examples_cpp" id="skill_li">
+					C++ 
+					<div class="but_example"> Examples </div>
+				</a>
+				<a id="skill_li">
+					C#	
+				</a>
+				<a id="skill_li">
+					Java
+				</a>
+				<a href="#examples_gml" id="skill_li">
+					GML
+					<div class="but_example"> Examples </div>
+				</a>
+				<a href="#examples_html5" id="skill_li">
+					html5 
+					<div class="but_example"> Examples </div>
+				</a>
+				<a href="#examples_css" id="skill_li">
+					CSS
+					<div class="but_example"> Examples </div>
+				</a>
+				<a id="skill_li">
+					GLSL
+				</a>
 			</div>
 			<div class="skill_box">
 				<div id="skill_box_title"> Engines / Libraries </div>
-				<li> SDL2
-				</li>
-				<li> OpenGL (GLEW / GLM)
-				</li>
-				<li> Game Maker Studio 2
-				</li>
-				<li> OpenJDK
-				</li>
-				<li> MonoGame / XNA
-				</li>
-				<li> OpenAL
-				</li>
-				<li> Enet
-				</li>
+				<a id="skill_li">
+					SDL2
+				</a>
+				<a id="skill_li">
+					OpenGL (GLEW / GLM)
+				</a>
+				<a id="skill_li">
+					Game Maker Studio 2
+				</a>
+				<a id="skill_li">
+					OpenJDK
+				</a>
+				<a id="skill_li">
+					MonoGame / XNA
+				</a>
+				<a id="skill_li">
+					OpenAL
+				</a>
+				<a id="skill_li">
+					Enet
+				</a>
 			</div>
 		</div>
 
@@ -141,13 +157,68 @@
 			</div>
 		</div>
 
-		<br>
-		<br>
-		<br>
-		<br>
 
+
+
+
+
+		<!-- EXAMPLES -->
+
+		<!-- C++ -->
+		<br>
+		<div class="infobar_toptxt" id="examples_cpp"> C++ Examples: </div>
+		<br>
+		<div class="example_list">
+			<a class="example_link" href="https://github.com/Rubbon/LD50">🔗 Source for HutHut (2022 | Github)</a>
+		</div>
+		
+		<!-- GML -->
+		<br>
+		<div class="infobar_toptxt" id="examples_gml"> GML Examples: </div>
+		<br>
+		<div class="example_list">
+			<a class="example_link" href="https://robinfield.itch.io/deliver-from-the-dead">🔗⤵ Source for Deliver from the Dead (2023 | Download)</a>
+			<a class="example_link" href="https://robinfield.itch.io/city33">🔗⤵ Source for City33 (2019 | Download)</a>
+			<a class="example_link" href="https://robinfield.itch.io/perpetual-quest">🔗⤵ Source for Perpetual Quest (2018 | Download)</a>
+		</div>
+
+		<!-- HTML5 -->
+		<br>
+		<div class="infobar_toptxt" id="examples_html5"> HTML5 Examples: </div>
+		<br>		
+		<a class="example_link" href="https://github.com/Rubbon/rubbon.github.io">🔗 This website (Github)</a>
+		
+		
+
+		<!-- CSS -->
+		<br>
+		<div class="infobar_toptxt" id="examples_css"> CSS Examples: </div>
+		<br>		
+		<a class="example_link" href="https://github.com/Rubbon/rubbon.github.io/blob/master/style_base.css">🔗 This website (Github)</a>
+
+
+		<br>
+		<br>
+		<br>
+		<br>
 	</div>
 
 	<jsc-navbar activeIndex=1></jsc-navbar>
 </body>
 </html>
+
+
+
+<script>
+//set my age programatically
+var _element = document.getElementById("my-age-txt");
+if (_element != null){
+	const date = new Date();
+	var _age = date.getFullYear() - 1998;
+	if (!(date.getMonth() >= 12 && date.getDay() >= 2)){
+		_age --;
+	}
+
+	_element.textContent = _age;
+}
+</script>

@@ -317,6 +317,7 @@ navbar-opt img {
 	position: relative;
 	font-weight: bold;
 
+	margin-top: 5%;
 	border-bottom-color: white;
 	border-bottom-width: 1vh / 1.75;
 	border-bottom-style: solid;
@@ -594,7 +595,7 @@ navbar-opt img {
 	align-items: center;
 	justify-content: center;
 
-	font-size: 25px;
+	font-size: 3vh;
 	color: black;
 }
 
@@ -608,12 +609,13 @@ navbar-opt img {
 
 #job_infobox_title {
 	margin-top: 10px;
-	font-size: 25px;
+	font-size: 2.5vh;
 	font-family: Roboto;
 }
 
 #job_infobox_info {
 	margin-top: 2px;
+	font-size: 1.5vh;
 	color: gray;
 }
 
@@ -654,7 +656,7 @@ navbar-opt img {
 	width: 46%;
 	min-width: 22vh;
 
-	margin-top: 4%;
+	margin-top: 1%;
 	margin-bottom: 4%;
 	padding-bottom: 1.5%;
 
@@ -668,21 +670,82 @@ navbar-opt img {
 	width: 100%;
 	height: 6vh;
 
-	font-size: 24px;
+	font-size: 2.5vh;
 
 	display: flex;
 	align-items: center;
 	padding-left: 3%;
+	margin-bottom: 2%;
 
 	color: black;
 }
 
-.skill_box li {
-	color: white;
-	margin-left: 5%;
-	margin-top: 2%;
+#skill_li {
+	transition-duration: 0.1s;
+	transition-timing-function: ease;
 
+	text-decoration: none;
+
+	color: white;
+	margin-left: 2%;
+	margin-right: 2%;
+	padding-left: 2%;
+	padding-right: 2%;
+	padding-top: 1%;
+	padding-bottom: 1%;
+	display: flex;
+	justify-content: space-between;
 }
+
+#skill_li:hover {
+	padding-left: 3%;
+	padding-right: 3%;
+	background-color: #231A0D;
+	color: #FFFF00;
+}
+
+.but_example {
+	/*
+	width: 20%;
+	padding-right: 1%;
+	padding-left: 1%;
+	text-align: center;
+	*/
+	
+	color: #FFFF00;
+}
+
+.example_link {
+	text-decoration: none;
+	font-size: 2.5vh;
+	font-family: Roboto;
+	margin-top: 0.25%;
+	margin-bottom: 0.25%;
+
+	color: #FF6D69;
+}
+
+.example_list {
+	display: flex;
+	flex-direction: column;
+}
+
+.example_link:hover {
+	color: white;
+}
+
+pre code {
+	background-color: #27272c;
+	border: 1px solid #494040;
+	display: block;
+	padding: 20px;
+	color: #D3AF86;
+
+	-o-user-select: text;
+    -moz-user-select: text;
+    -webkit-user-select: text;
+    user-select: text;
+  }
 
 /*-------------------------------------------------------------------------------------------------/
   ART PAGE STUFF
