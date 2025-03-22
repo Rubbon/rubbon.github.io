@@ -411,6 +411,39 @@ navbar-opt img {
 	background-color: brown;
 }
 
+
+.game_catlabel {
+	/* nineslice */
+	border-image: url(img/dbox_nineslice.png) 20 fill repeat;
+	border-image-width: 2vh;
+	border-image-outset: 10px;
+
+	padding-top: 0.6%;
+	padding-bottom: 1.2%;
+
+	width: 100%;
+	height: 40px;
+
+	position: relative;
+	bottom: 0px;
+
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	flex-wrap: wrap;
+
+	color: white;
+	font-size: large;
+	text-align: center;
+	font-family: Roboto;
+	text-wrap: pretty;
+
+	font-size: 3vh;
+
+	background-color: brown;
+}
+
+
 .game_catbox {
 	/* nineslice */
 	border-image: url(img/dbox_nineslice.png) 20 fill repeat;
